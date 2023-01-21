@@ -178,6 +178,8 @@ body{
     min-height: 200px;
     width: 80%;
     background-color: var(--kolor-tla);
+    overflow: auto;
+    padding: 5px;
 }
 
 .dane-kontakt{
