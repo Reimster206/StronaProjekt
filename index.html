@@ -186,14 +186,15 @@
     }*/
     let MenuItems = document.querySelector(".menu");
     let navi = document.querySelector(".navi");
-
+    navi.style.minHeight="40px";
             function menutoggle(){
                 if(MenuItems.style.display == "none"){
                     MenuItems.style.display = "block";
-                    navi.style.minHeight='57vh';
+                    navi.style.minHeight='35vh';
                 }
                 else{
                     MenuItems.style.display = "none";
+                    navi.style.minHeight="40px";
                 }
             }
   </script>
