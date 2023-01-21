@@ -43,7 +43,6 @@ body{
     max-width: 100%;
     top: 0;
     position: sticky;
-    
 }
 
 .podnavi{
@@ -169,7 +168,7 @@ body{
 
 /***********KONIEC STYLU NAWIGACJI**************/
 .main{
-    min-height: 800px;
+    height: 800px;
     border: 1px black solid;
     width: 80%;
     margin-left: auto;
@@ -186,9 +185,25 @@ body{
 
 .kierunki{
     width: 100%;
-    height: 25%;
+    min-height: 25%;
     border: solid black 1px;
     margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.kierunek{
+    width: 200px;
+    height: 180px;
+    border: red 1px solid;
+    display: inline;
+    margin: 5px;
+    float: left;
+}
+
+.czysty{
+    clear: both;
 }
 
 /**********KONIEC STYLU MAINA******************/
