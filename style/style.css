@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --kolor-tla: rgb(19, 82, 141);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    margin-top: 5px;
+}
+
+.baner{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*****************POCZATEK STYLU NAWIGACJI*****************/
+.menu{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navi{
+    background-color: var(--kolor-tla);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    
+}
+
+.podnavi{
+    width: 20%;
+    padding: 12px 0 0 0;
+    transition: all .5s ease-out;
+}
+
+.navi .menu li,.navi .menu a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.material-symbols-outlined{
+    position: absolute;
+}
+
+#menu-icon{
+    text-align: right;
+}
+
+.menu > li{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width:20%;
+    min-width: fit-content;
+    padding: 10px 0 0 0;
+    text-align: center;
+    transition: all .5s ease-out;
+}
+
+
+.menu > li:hover{
+    background-color: rgb(49, 155, 255);
+    cursor: pointer;
+}
+
+.menu .nav-poz:hover .podnavi{
+    display: block;
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu > li > .podnavi{
+    transition: all .25s ease;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.menu > li > ul > li{
+    padding: 5px 0 5px 0;
+    list-style: none;
+    text-decoration: none;
+    background-color: rgb(49, 155, 255);
+    max-width: 94vw;
+    transition: all .25s ease;
+}
+
+.menu > li > ul > li:hover{
+    background-color: rgb(25, 122, 212);
+}
+
+.menu > li > ul > li > ul >li{
+    background-color: aqua;
+    list-style: none;
+    text-decoration: none;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav-pod .podnavi2{
+    transition: all .25s ease;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.podnvai2 li{
+    transition: all .5s ease;
+    width: 90%;
+}
+
+.nav-pod:hover .podnavi2{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+#menu-icon{
+    display: none;
+}
+@media only screen and (max-width: 800px){
+    .navi{
+        height: 7vh;
+    }
+    .navi ul{
+        position: absolute;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        
+    }
+    .menu{
+        display: none;
+    }
+    .navi ul li{
+        display: block;
+    }
+    .navi ul li a{
+        color: #fff;
+    }
+    #menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/***********KONIEC STYLU NAWIGACJI**************/
+.main{
+    height: 1600px;
+    border: 1px black solid;
+} 
+
+/**********KONIEC STYLU MAINA******************/
+#stopa{
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 200px;
+    width: 80%;
+    background-color: var(--kolor-tla);
+}
+
+.dane-kontakt{
+    float: left;
+    width: 30%
+}
+
+.kontakt-tt{
+    font-size: 1.8em;
+    color:rgb(149, 232, 247);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.kontakt-im{
+    font-size: 1.2em;
+    color: white;
+    font-weight: 200;
+}
+
+.kontakt{
+    color:rgb(14, 219, 255);
+}
+
+.spons{
+    width: 70%;
+    float: left;
+}
+
+.sponsorzy1 ,.sponsorzy2{
+    display: inline;
+    justify-content: center;
+}
+
+.sponsorzy1 img,.sponsorzy2 img{
+    filter: grayscale(1);
+    margin: 5px;
+    height: 75px;
+    object-fit: contain;
+    transition: all .25s ease-out;
+}
+
+.sponsorzy1 img:hover,.sponsorzy2 img:hover{
+    filter: grayscale(0);
+    transform:scale(1.05);
+}
+
+@media only screen and (max-width:800px){
+    .sponsorzy1 ,.sponsorzy2{
+        display: block;
+    }
+
+    .dane-kontakt{
+        width: 100%;
+        clear: both;
+    }
+
+    .spons{
+        clear: both;
+    }
+
+    .sponsorzy1 img,.sponsorzy2 img{
+        filter: grayscale(1);
+        margin: 5px;
+        width: 40%;
+        object-fit: contain;
+        transition: all .25s ease-out;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#zegar{
+    border: 1px solid black;
+}
+/**********KONIEC STYLU FOOTERA***************/
