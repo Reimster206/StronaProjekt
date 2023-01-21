@@ -41,6 +41,8 @@ body{
     align-items: center;
     flex-wrap: wrap;
     max-width: 100%;
+    top: 0;
+    position: sticky;
     
 }
 
