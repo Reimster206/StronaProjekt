@@ -177,14 +177,14 @@ body{
 } 
 
 .central{
-    width: 70%;
+    width: 75%;
     height: 1500px;
     margin:2.5px;
     border: solid black 1px;
 }
 
 .kierunki{
-    width: 30%;
+    width: 25%;
     height: 1500px;
     border: solid black 1px;
     margin: 2.5px;
