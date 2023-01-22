@@ -168,7 +168,7 @@ body{
 
 /***********KONIEC STYLU NAWIGACJI**************/
 .main{
-    height: 800px;
+    min-height: 100vh;
     border: 1px black solid;
     width: 80%;
     margin-left: auto;
@@ -181,6 +181,9 @@ body{
     height: 75%;
     border: solid black 1px;
     margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .kierunki{
@@ -204,6 +207,30 @@ body{
 
 .czysty{
     clear: both;
+}
+
+.post{
+    width: 80%;
+    min-height: 20vh;
+    border: 1px solid red;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+}
+
+.zdj-post{
+    border: 1px solid green;
+    width: 30%;
+    min-height: 25vh;
+    margin:5px;
+}
+
+.tekst-post{
+    border: 1px solid yellow;
+    width: 70%;
+    min-height: 25vh;
+    padding: 5px;
+    margin: 5px;
 }
 
 /**********KONIEC STYLU MAINA******************/
