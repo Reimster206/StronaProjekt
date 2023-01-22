@@ -78,6 +78,21 @@
         <p>Zespół Szkół Elektronicznych<br>im. Bohaterów Westerplatte w Radomiu</p>
     </div>
     <div class="main">
+        <h2 class="tts-kierunki">Wybierz swoją drogę!</h2>
+        <ul class="proba">
+            <li style="color:rgb(49, 155, 255);"><a onclick="prg()" href="#" data-text="&nbsp;Programista">&nbsp;Programista&nbsp;</a></li>
+            <div class="kierunek-prg">
+                sraczka
+            </div>
+            <li><a onclick="inf()" href="#" data-text="&nbsp;informatyk">&nbsp;informatyk&nbsp;</a></li>
+            <div class="kierunek-inf">
+                sraczka2
+            </div>
+            <li><a href="#" data-text="&nbsp;Mechatronik">&nbsp;Mechatronik&nbsp;</a></li>
+            <li><a href="#" data-text="&nbsp;Robotyk">&nbsp;Robotyk&nbsp;</a></li>
+            <li><a href="#" data-text="&nbsp;Automatyk">&nbsp;Automatyk&nbsp;</a></li>
+            <li><a href="#" data-text="&nbsp;Elektronik">&nbsp;Elektronik&nbsp;</a></li>
+        </ul>
     </div>                                                                                                                  
     <footer>
         <div id="stopa">
@@ -155,15 +170,29 @@
     let MenuItems = document.querySelector(".menu");
     let navi = document.querySelector(".navi");
     navi.style.minHeight="40px";
-            function menutoggle(){
-                if(MenuItems.style.display == "none"){
-                    MenuItems.style.display = "block";
-                    navi.style.minHeight='34vh';
-                }
-                else{
-                    MenuItems.style.display = "none";
-                    navi.style.minHeight="40px";
-                }
-            }
+    function menutoggle(){
+        if(MenuItems.style.display == "none"){
+            MenuItems.style.display = "block";
+            navi.style.minHeight='34vh';
+        }
+        else{
+            MenuItems.style.display = "none";
+            navi.style.minHeight="40px";
+        }
+    }
+    
+    var prgb = document.querySelector(".kierunek-prg");
+    var infb = document.querySelector(".kierunek-inf");
+
+
+    function prg(){
+        prgb.style.display="block";
+        infb.style.display="none";
+    }
+
+    function inf(){
+        prgb.style.display="none";
+        infb.style.display="block";
+    }
   </script>
 </html>

@@ -43,6 +43,7 @@ body{
     max-width: 100%;
     top: 0;
     position: sticky;
+    z-index: 999;
 }
 
 .podnavi{
@@ -330,3 +331,63 @@ body{
     border: 1px solid black;
 }
 /**********KONIEC STYLU FOOTERA***************/
+
+.proba{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.proba li{
+    position: relative;
+    list-style: none;
+    color:rgb(49, 155, 255);
+}
+
+.proba li a{
+    position: relative;
+    color:rgb(49, 155, 255);
+    font-size: 3em;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 15);
+}
+
+.proba li a::before{
+    content: attr(data-text);
+    position: absolute;
+    color:rgb(49, 155, 255);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 8px solid blue;
+    -webkit-text-stroke: 1px blue;
+}
+
+.proba li a:hover::before, .proba li a:focus::before, .proba li a:active::before{
+    width: 100%;
+    filter: drop-shadow(0 0 25px blue);
+}
+
+/*.proba-hover{
+    width: 100%;
+    filter: drop-shadow(0 0 25px blue);
+    transition: 1s;
+    border-right: 8px solid blue;
+    -webkit-text-stroke: 1px blue;
+    content: attr(data-text);
+    position: absolute;
+    color:rgb(49, 155, 255);
+}*/
+
+.kierunek-prg,.kierunek-inf{
+    display: none;
+    transition: all 1s;
+    border: 1px solid red;
+    width: 100px;
+    height: 109px;
+}

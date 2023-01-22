@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Kuba Amanowicz Adam Balekowski Borys Darecki">
+        <meta name="keywords" content="ZSE RADOM, szkoła radom, elektronik radom">
+        <meta name="description" content="Strona internetowa radomskiego zespołu szkół elektrnicznych im. Bohaterów Westerplatte">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="../style/style-kierunki.css">
+        <script src="js/script.js"></script>
+        <title>Elektronik Radom</title>
+    </head>
+    <body> <!--usunalem onload="godzina()"-->
+    <div class="container">
+    <nav class="navi">
+        <ul class="menu">
+            <li class="nav-poz"><a href="#" class="poz">Strona Główna</a></li>                                                                            <!--POCZATEK NAWIGACJI-->
+            <li class="nav-poz" onclick="arrow()">O szkole &raquo
+                <ul class="podnavi" id="podnaviP">
+                    <li class="nav-pod"><a href="#" class="poz1">Dyrekcja i kierownictwo szkoły</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Zarys Historyczny</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Nauczyciele i Pracownicy niepedagogiczni ZSE</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">O Bohaterach Westerplatte - Patron</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Statut Technikum w Zespole Szkół Elektronicznych</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Statut Branżowej Szkoły I Stopnia w Zespole Szkół Elektronicznych</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Kalendarz wydarzeń</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Plan pracy szkoły</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Rada rodziców ZSE</a></li>
+                </ul>
+            </li>
+            <li class="nav-poz">Oferta Edukacyjna &raquo
+                <ul class="podnavi">
+                    <li class="nav-pod"><a href="#" class="poz1">Kierunki kształcenia 2022/2023</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Zasady rekrutacji 2022/2023</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Badania do szkoły 2022/2023</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Profile w szkole</a>
+                    </li>
+                    <li class="nav-pod"><a href="#" class="poz1">Harmonogram rekrutacji 2022/2023</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">ROZPORZĄDZENIE MINISTRA EDUKACJI NARODOWEJ  z dnia 21 sierpnia 2019</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Informacja o kształceniu w polskim systemie oświaty osób przybywających z zagranicy</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Wykaz zawodów wiedzy, artystycznych i sportowych 2022 r.</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Przedmiotowe Wymagania Edukacyjne</a></li>
+                </ul>
+            </li>
+            <li class="nav-poz">Strefa Ucznia &raquo
+                <ul class="podnavi">
+                    <li class="nav-pod"><a href="#" class="poz1">COVID</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Dokumenty</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Egzaminy - informacje</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Pracownie i warsztaty</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Stypendia</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Samorząd szkolny</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Wykaz zajęć pozalekcyjnych</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Biblioteka szkolna</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Terminy praktyk klas III i IV 2022/2023</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Pomoc psychologiczno pedagogiczna</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Aktywna tablica</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Druki do pobrania</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Godziny dostępości nauczycieli</a></li>
+                </ul>
+            </li>
+            <li class="nav-poz">Ogłoszenia &raquo
+                <ul class="podnavi">
+                    <li class="nav-pod"><a href="#" class="poz1">Sekretariat i Księgowość</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Dyrekcja szkoły</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Konkursy i olimipady</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Sport i rekreacja</a></li>
+                </ul>
+            </li>
+            <a href="#stopa"><li class="nav-poz">Kontakt &raquo</a>
+            </li>
+        </ul>  
+        <span class="material-symbols-outlined" id="menu-icon" onclick="menutoggle()">menu</span>                                                                                                     <!--KONIEC NAWIGACJI-->
+    </nav>
+    <div class="baner">
+        <p>Zespół Szkół Elektronicznych<br>im. Bohaterów Westerplatte w Radomiu</p>
+    </div>
+    <div class="main">
+    </div>                                                                                                                  
+    <footer>
+        <div id="stopa">
+
+        <div class="dane-kontakt">
+            <p class="kontakt-tt">Dane teleadresowe</p>
+            <p class="kontakt-im">Zespół Szkół Elektronicznych<br>im. Bohaterów Westerplatte</p>
+            <p class="kontakt">ul. Sadkowska 19<br>26-600 Radom<br>tel. 48 344-81-16<br>fax. 48 344-05-97<br>e-mail zse@elektronik.edu.pl</p>
+        </div>
+        <div class="spons">
+        <div class="sponsorzy1">
+            <div class="sposer">
+                <img src="../img/elektronikLogo.png" alt="elektronik">
+            </div>
+            <div class="sposer">
+                <img src="../img/ciscoLogo.png" alt="baner-cisco">
+            </div>
+            <div class="sposer">
+                <img src="../img/caritasLogo.png" alt="caritas-radom">
+            </div>
+            <div class="sposer">
+                <img src="../img/durrLogo.png" alt="durr">
+            </div>
+            <div class="sposer">
+                <img src="../img/itmLogo.png" alt="itm">
+            </div>
+            <div class="sposer">
+                <img src="../img/kombudLogo.png" alt="kombud">
+            </div>
+            <div class="sposer">
+                <img src="../img/60latLogo.png" alt="automobil">
+            </div>
+            <div class="sposer">
+                <img src="../img/radwagLogo.png" alt="radwag">
+            </div>       
+        </div>
+    </div>
+</div>
+    </footer>                                                                                                        <!--POCZATEK STOPKI-->
+        <!--<div id="zegar">
+            
+        </div>-->
+    </div>                                                                                                                 <!--KONIEC STOPKI--> 
+    </body>
+    <script>
+    /*
+    let icon=document.querySelector('.material-symbols-outlined');
+    icon.innerHTML="expand_more";
+    let podPozP=document.querySelector('#podnaviP');
+    
+    function arrow(){
+        if(podPozP.style.display=="none"){
+            podPozP.style.display="block";
+            podPozP.style.position="absolute";
+            icon.innerHTML="close";
+        }else{
+            podPozP.style.display="none";
+            icon.innerHTML="expand_more";
+        }
+
+        //podPozP.style.display="block";
+        //podPozP.style.position="absolute";
+        
+    }*/
+    let MenuItems = document.querySelector(".menu");
+    let navi = document.querySelector(".navi");
+    navi.style.minHeight="40px";
+            function menutoggle(){
+                if(MenuItems.style.display == "none"){
+                    MenuItems.style.display = "block";
+                    navi.style.minHeight='34vh';
+                }
+                else{
+                    MenuItems.style.display = "none";
+                    navi.style.minHeight="40px";
+                }
+            }
+  </script>
+</html>
