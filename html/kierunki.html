@@ -88,10 +88,22 @@
             <div class="kierunek-inf">
                 sraczka2
             </div>
-            <li><a href="#" data-text="&nbsp;Mechatronik">&nbsp;Mechatronik&nbsp;</a></li>
-            <li><a href="#" data-text="&nbsp;Robotyk">&nbsp;Robotyk&nbsp;</a></li>
-            <li><a href="#" data-text="&nbsp;Automatyk">&nbsp;Automatyk&nbsp;</a></li>
-            <li><a href="#" data-text="&nbsp;Elektronik">&nbsp;Elektronik&nbsp;</a></li>
+            <li><a onclick="mech()" href="#" data-text="&nbsp;Mechatronik">&nbsp;Mechatronik&nbsp;</a></li>
+            <div class="kierunek-mech">
+                sraczka3
+            </div>
+            <li><a onclick="rob()" href="#" data-text="&nbsp;Robotyk">&nbsp;Robotyk&nbsp;</a></li>
+            <div class="kierunek-rob">
+                sraczka4
+            </div>
+            <li><a onclick="aut()" href="#" data-text="&nbsp;Automatyk">&nbsp;Automatyk&nbsp;</a></li>
+            <div class="kierunek-aut">
+                sraczka5
+            </div>
+            <li><a onclick="ele()" href="#" data-text="&nbsp;Elektronik">&nbsp;Elektronik&nbsp;</a></li>
+            <div class="kierunek-ele">
+                sraczka6
+            </div>
         </ul>
     </div>                                                                                                                  
     <footer>
@@ -183,15 +195,68 @@
     
     var prgb = document.querySelector(".kierunek-prg");
     var infb = document.querySelector(".kierunek-inf");
+    var mechb = document.querySelector(".kierunek-mech");
+    var robb = document.querySelector(".kierunek-rob");
+    var autb = document.querySelector(".kierunek-aut");
+    var eleb = document.querySelector(".kierunek-ele");
+
+    prgb.style.display="block";
+    infb.style.display="none";
+    mechb.style.display="none";
+    robb.style.display="none";
+    autb.style.display="none";
+    eleb.style.display="none";
 
     function prg(){
         prgb.style.display="block";
         infb.style.display="none";
+        mechb.style.display="none";
+        robb.style.display="none";
+        autb.style.display="none";
+        eleb.style.display="none";
     }
 
     function inf(){
         prgb.style.display="none";
         infb.style.display="block";
+        mechb.style.display="none";
+        robb.style.display="none";
+        autb.style.display="none";
+        eleb.style.display="none";
+    }
+    function mech(){
+        prgb.style.display="none";
+        infb.style.display="none";
+        mechb.style.display="block";
+        robb.style.display="none";
+        autb.style.display="none";
+        eleb.style.display="none";
+    }
+
+    function rob(){
+        prgb.style.display="none";
+        infb.style.display="none";
+        mechb.style.display="none";
+        robb.style.display="block";
+        autb.style.display="none";
+        eleb.style.display="none";
+    }
+    function aut(){
+        prgb.style.display="none";
+        infb.style.display="none";
+        mechb.style.display="none";
+        robb.style.display="none";
+        autb.style.display="block";
+        eleb.style.display="none";
+    }
+
+    function ele(){
+        prgb.style.display="none";
+        infb.style.display="none";
+        mechb.style.display="none";
+        robb.style.display="none";
+        autb.style.display="none";
+        eleb.style.display="block";
     }
   </script>
 </html>
