@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body{
     margin-top: 5px;
@@ -175,7 +175,17 @@ body{
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
+    font-family: 'Oswald', sans-serif;
 } 
+
+.kierunek-aut,.kierunek-ele,.kierunek-inf,.kierunek-mech,.kierunek-prg,.kierunek-rob{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.tts-kierunki{
+    padding: 20px 0 20px 10px;
+    font-family: 'Jost', sans-serif;
+}
 
 .central{
     width: 100%;

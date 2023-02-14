@@ -25,13 +25,25 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../img/baner1.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
 }
+
+.baner p{
+    color: #fff;
+    font-size: 290%;
+    font-family: 'Bebas Neue', cursive;
+}
+
 /*****************POCZATEK STYLU NAWIGACJI*****************/
 .menu{
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .navi{
@@ -246,7 +258,8 @@ body{
 
 .dane-kontakt{
     float: left;
-    width: 30%
+    width: 30%;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .kontakt-tt{
