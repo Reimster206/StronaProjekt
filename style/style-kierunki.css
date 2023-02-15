@@ -398,6 +398,18 @@ body{
     display: none;
     transition: all 1s;
     border: 1px solid red;
-    width: 100px;
-    height: 109px;
+    overflow: visible;
+    transition: all .5s ease;
+}
+
+.txt, .zdj{
+    width: 50%;
+    float: left;
+    max-height: 400px;
+    overflow: hidden;
+
+}
+
+.cle{
+    clear: both;
 }
