@@ -210,11 +210,12 @@ body{
 
 .kierunek{
     width: 200px;
-    height: 180px;
+    height: 200px;
     border: red 1px solid;
     display: inline;
     margin: 5px;
     float: left;
+    cursor: pointer;
 }
 
 .czysty{
@@ -275,39 +276,62 @@ body{
 
 }
 
-/*To jest pod slider*/
-
-.kierunekmb{
-    display: none;
+/*slider*/
+.prev,.next{
+    color: #ffffff00;
+    cursor: none;
 }
-
 @media only screen and (max-width:600px){
     .kierunek{
         display: none;
-    }
-
-    .kierunekmb{
-        display: block;
-        width: 60vw;
-        height: 40vh;
+        width: 250px;
+        height: 250px;
         border: 1px solid red;
         margin: 5px;
     }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 80%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(0,0,0,0.2);
+      }
+      .next {
+        right: 0;
+        border-radius: 20% 0 0 20%;
+      }
+      .prev{
+        left: 0;
+        border-radius: 0 20% 20% 0;
+      }
+      .next:hover {
+        background-color: rgba(0,0,0,0.6);
+        border-radius: 20% 0 0 20%;
+      }
+      .prev:hover{
+        background-color: rgba(0,0,0,0.6);
+        border-radius: 0 20% 20% 0;
+      }
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
 }
 
-@media only screen and (max-width:450px){
-    .kierunek{
-        display: none;
-    }
 
-    .kierunekmb{
-        display: block;
-        width: 60vw;
-        height: 25vh;
-        border: 1px solid red;
-        margin: 5px;
-    }
-}
 
 /**********KONIEC STYLU MAINA******************/
 #stopa{
