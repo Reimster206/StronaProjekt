@@ -4,6 +4,7 @@ if(screen.width<600){
   
 };
 
+
 /*function showSlides() {
   let i;
   let n=0;
@@ -17,7 +18,9 @@ if(screen.width<600){
   slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 2000); 
 }*/
-let slideIndex = 1;
+
+
+let slideIndex = 0;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -36,5 +39,7 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+  slideIndex++;
   slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); 
 }
