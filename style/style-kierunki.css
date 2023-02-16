@@ -397,27 +397,7 @@ body{
 .kierunek-prg,.kierunek-inf,.kierunek-mech,.kierunek-rob,.kierunek-aut,.kierunek-ele{
     display: none;
     transition: all 1s;
-    border: 1px solid red;
     overflow: visible;
     transition: all .5s ease;
 }
 
-.txt, .zdj{
-    width: 50%;
-    float: left;
-    height: 100%;
-    overflow: hidden;
-
-}
-
-img{
-    border: 3px solid greenyellow;
-}
-
-.sekcja{
-    width: 100%;
-}
-
-.cle{
-    clear: both;
-}

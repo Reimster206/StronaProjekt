@@ -245,6 +245,70 @@ body{
     margin: 5px;
 }
 
+@media only screen and (max-width:950px){
+    .post{
+        width:90%;
+    }
+}
+
+@media only screen and (max-width:910px){
+    .post{
+        width:90%;
+    }
+
+    .zdj-post,.tekst-post{
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width:750px){
+    .post{
+        width:80%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .zdj-post,.tekst-post{
+        width: 90%;
+    }
+
+}
+
+/*To jest pod slider*/
+
+.kierunekmb{
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    .kierunek{
+        display: none;
+    }
+
+    .kierunekmb{
+        display: block;
+        width: 60vw;
+        height: 40vh;
+        border: 1px solid red;
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .kierunek{
+        display: none;
+    }
+
+    .kierunekmb{
+        display: block;
+        width: 60vw;
+        height: 25vh;
+        border: 1px solid red;
+        margin: 5px;
+    }
+}
+
 /**********KONIEC STYLU MAINA******************/
 #stopa{
     margin-left: auto;
@@ -314,9 +378,23 @@ body{
     transform:scale(1.05);
 }
 
+@media only screen and (max-width:1200px){
+    #stopa{
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width:800px){
     .sponsorzy1 ,.sponsorzy2{
         display: block;
+    }
+
+    .main{
+        width: 95%;
+    }
+
+    .baner{
+        width: 100%;
     }
 
     .dane-kontakt{

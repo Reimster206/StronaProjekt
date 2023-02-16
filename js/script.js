@@ -1,4 +1,4 @@
-function godzina() {
+/*function godzina() {
     let data = new Date();
     let godzina = data.getHours();
     let  minuta = data.getMinutes();
@@ -16,4 +16,5 @@ function godzina() {
     setTimeout(godzina,1)
 }
 setInterval(godzina, 10);
+*/
 
