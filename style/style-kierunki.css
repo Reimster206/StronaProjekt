@@ -313,8 +313,15 @@ body{
 }
 
 @media only screen and (max-width:800px){
-    .sponsorzy1 ,.sponsorzy2{
+    .sponsorzy1{
         display: block;
+        justify-content: center;
+    }
+    #stopa{
+        justify-content: center;
+    }
+    .dane-kontakt{
+        text-align: center;
     }
 
     .dane-kontakt{
@@ -328,8 +335,8 @@ body{
 
     .sponsorzy1 img,.sponsorzy2 img{
         filter: grayscale(1);
-        margin: 5px;
-        width: 40%;
+        margin: 0 20px;
+        width: 100%;
         object-fit: contain;
         transition: all .25s ease-out;
         margin-left: auto;

@@ -43,7 +43,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto Mono', monospace;
 }
 
 .navi{
@@ -154,6 +153,7 @@ body{
 @media only screen and (max-width: 800px){
     .navi{
         height: 7vh;
+        display: flex;
     }
     .navi ul{
         position: absolute;
@@ -165,6 +165,8 @@ body{
     }
     .menu{
         display: none;
+        align-items: center;
+        
     }
     .navi ul li{
         display: block;
@@ -175,6 +177,13 @@ body{
     #menu-icon{
         display: block;
         cursor: pointer;
+        right: 0;
+        margin-right: 20px;
+    }
+    .podnavi{
+        width: 20%;
+        padding: 0px 0 0 0;
+        transition: all .5s ease-out;
     }
 }
 
@@ -322,7 +331,7 @@ body{
       }
       .fade {
         animation-name: fade;
-        animation-duration: 1.5s;
+        animation-duration: 1s;
       }
       
       @keyframes fade {
@@ -364,6 +373,10 @@ body{
 }
 
 .kontakt{
+    color:rgb(14, 219, 255);
+}
+.kontakt a{
+    text-decoration: none;
     color:rgb(14, 219, 255);
 }
 
@@ -409,8 +422,15 @@ body{
 }
 
 @media only screen and (max-width:800px){
-    .sponsorzy1 ,.sponsorzy2{
+    .sponsorzy1{
         display: block;
+        justify-content: center;
+    }
+    #stopa{
+        justify-content: center;
+    }
+    .dane-kontakt{
+        text-align: center;
     }
 
     .main{
@@ -428,12 +448,13 @@ body{
 
     .spons{
         clear: both;
+        align-items: center;
     }
 
     .sponsorzy1 img,.sponsorzy2 img{
         filter: grayscale(1);
-        margin: 5px;
-        width: 40%;
+        margin: 0 20px;
+        width: 100%;
         object-fit: contain;
         transition: all .25s ease-out;
         margin-left: auto;

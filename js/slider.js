@@ -1,9 +1,6 @@
 if(screen.width<600){
   window.onload=showSlides;
-}else{
-  
 };
-
 
 /*function showSlides() {
   let i;
@@ -42,5 +39,5 @@ function showSlides(n) {
   }
   slideIndex++;
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); 
+  setTimeout(showSlides, 3000); 
 }
