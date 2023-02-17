@@ -25,18 +25,248 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../img/baner1.png");
-    background-repeat: no-repeat;
-    background-size:cover;
+}
+
+:root {
+    --navbar-height: 56px;
+    --navbar-background-color: #54557c;
+    --navbar-item-text-color: #ffffff;
+    --navbar-item-background-color: rgb(19, 82, 141);
+    --navbar-item-text-color-hover: rgb(149, 232, 247);
+    --navbar-item-font: bold 1rem/1rem "Open Sans", Arial, Helvetica, sans-serif;
+    --navbar-item-background-color-hover: white;
+    --navbar-font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--navbar-height);
+    background-color: var(--navbar-background-color);
+    font-family: var(--navbar-font-family);
+    z-index: 9999;
+  }
+  
+  .navbar #togglericon {
+    visibility: hidden;
+  }
+  
+  .navbar #togglericon:after {
+    content: "☰";
+    position: absolute;
+    visibility: visible;
+    color: black;
+    font-size: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
     text-align: center;
-}
+    margin: 0;
+    padding: 0;
+    line-height: 1.8rem;
+    border-radius: 4px;
+    border: 2px solid #ffffff00;
+  }
+  
+  .navbar #togglericon:checked:after {
+    color: black;
+    /* border: 2px solid #f0f0f0; */
+  }
+  
+  .nav {
+    position: fixed;
+    top: 40px;
+    left: 0px;
+    right: 0px;
+    visibility: hidden;
+    opacity: 0;
+    padding: 8px;
+    transition: all 0.5s ease;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--navbar-item-background-color);
+    box-shadow: 0px 4px 4px 0px #00000088;
+  }
+  
+  .navbar #togglericon:checked ~ div.nav {
+    visibility: visible;
+    transition: all 0.3s ease;
+    opacity: 1;
+  }
+  
+  .nav a {
+    padding: 8px;
+    font: var(--navbar-item-font);
+    text-decoration: none;
+    color: var(--navbar-item-text-color);
+    background-color: var(--navbar-item-background-color);
+  }
+  
+  .nav a:hover {
+    color: var(--navbar-item-text-color-hover);
+  }
+  
+  .nav p {
+    margin: 0;
+    padding: 8px;
+    color: var(--navbar-item-text-color);
+  }
+  
+  .dropdown {
+    position: relative;
+    display: block;
+    color: var(--navbar-item-text-color);
+    font: var(--navbar-item-font);
+  }
+  .dropdown label {
+    display: block;
+    padding: 8px;
+  }
+  
+  .dropdown label:after {
+    position: absolute;
+    content: "▼";
+    color: var(--navbar-item-text-color);
+    font-size: 0.75rem;
+    top: 8px;
+    margin-left: 4px;
+  }
+  
+  .dropdown label:hover {
+    color: var(--navbar-item-text-color-hover);
+  }
+  .dropdown label:hover:after {
+    color: var(--navbar-item-text-color-hover);
+  }
+  .dropdown input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  .dropdown input:checked ~ ul {
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: max-height 0.5s ease;
+  }
 
-.baner p{
-    color: #fff;
-    font-size: 290%;
-    font-family: 'Bebas Neue', cursive;
-}
+  .dropdown input:checked ~ ul > li > a {
+    display: block;
+    min-height: fit-content
+  }
 
+  .dropdown ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: scroll;
+    max-height: 0px;
+    transition: max-height 0.25s ease;
+  }
+  .dropdown li {
+    margin: 12px 0px 12px 16px;
+  }
+  
+  .dropdown a {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  .navbar-centered {
+    justify-content: center;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar #togglericon:checked ~ div.nav,
+    .navbar #togglericon ~ div.nav {
+      visibility: visible;
+    }
+  
+    .navbar {
+      height: var(--navbar-height);
+      background-color: var(--navbar-item-background-color);
+      flex-direction: row;
+      display: flex;
+      visibility: visible;
+      position: fixed;
+      left: 0;
+      top: 0;
+      opacity: 1;
+      width: 100%;
+      box-shadow: 0px 1px 5px 0px #88888888;
+    }
+  
+    .toggler {
+      display: none;
+    }
+  
+  
+    .nav {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      opacity: 1;
+      box-shadow: none;
+      background-color: #ffffff00; /* transparent */
+    }
+  
+    .at-center {
+      position: absolute;
+    }
+  
+    .dropdown {
+      margin: 0 8px;
+    }
+    .dropdown ul {
+      position: absolute;
+      top: 24px;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--navbar-item-background-color);
+      padding: 0;
+    }
+    .dropdown:checked ~ ul {
+      max-height: fit-content;
+      transition: max-height 0.5s ease;
+      margin: 16px 0;
+      border-left: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+      box-shadow: 5px 5px 5px 0px #99999988;
+    }
+  
+    .dropdown ul li {
+      width: 100%;
+      margin: 4px;
+      padding: 0;
+      display: flex;
+    }
+    .dropdown ul li a {
+      color: white;
+      padding: 8px;
+      margin: 0;
+      display: block;
+      width: 100%;
+      white-space: nowrap;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .nav {
+      justify-content: center;
+    }
+    .nav * {
+      margin: 0px 8px;
+    }
+
+  }
+  
 /*****************POCZATEK STYLU NAWIGACJI*****************/
 .menu{
     width: 80%;
@@ -153,10 +383,9 @@ body{
 @media only screen and (max-width: 800px){
     .navi{
         height: 7vh;
-        display: flex;
     }
     .navi ul{
-        
+        position: absolute;
         background: #333;
         width: 100%;
         overflow: hidden;
@@ -164,15 +393,8 @@ body{
         
     }
     .menu{
-        display: block;
-        align-items: center;
-        
+        display: none;
     }
-
-    .menu > li{
-        width: 100%;
-    }
-
     .navi ul li{
         display: block;
     }
@@ -182,14 +404,6 @@ body{
     #menu-icon{
         display: block;
         cursor: pointer;
-        right: 0;
-        margin-right: 20px;
-    }
-    .podnavi{
-        width: 100%;
-        text-align: center;
-        padding: 0px 0 0 0;
-        transition: all .5s ease-out;
     }
 }
 
@@ -225,12 +439,11 @@ body{
 
 .kierunek{
     width: 200px;
-    height: 200px;
+    height: 180px;
     border: red 1px solid;
     display: inline;
     margin: 5px;
     float: left;
-    cursor: pointer;
 }
 
 .czysty{
@@ -261,93 +474,6 @@ body{
     margin: 5px;
 }
 
-@media only screen and (max-width:950px){
-    .post{
-        width:90%;
-    }
-}
-
-@media only screen and (max-width:910px){
-    .post{
-        width:90%;
-    }
-
-    .zdj-post,.tekst-post{
-        width: 50%;
-    }
-
-}
-
-@media only screen and (max-width:750px){
-    .post{
-        width:80%;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .zdj-post,.tekst-post{
-        width: 90%;
-    }
-
-}
-
-/*slider*/
-.prev,.next{
-    color: #ffffff00;
-    cursor: none;
-}
-@media only screen and (max-width:600px){
-    .kierunek{
-        display: none;
-        width: 250px;
-        height: 250px;
-        border: 1px solid red;
-        margin: 5px;
-    }
-    .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 73%;
-        width: auto;
-        margin-top: -22px;
-        padding: 16px;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        background-color: rgba(0,0,0,0.2);
-      }
-      .next {
-        right: 0;
-        border-radius: 20% 0 0 20%;
-      }
-      .prev{
-        left: 0;
-        border-radius: 0 20% 20% 0;
-      }
-      .next:hover {
-        background-color: rgba(0,0,0,0.6);
-        border-radius: 20% 0 0 20%;
-      }
-      .prev:hover{
-        background-color: rgba(0,0,0,0.6);
-        border-radius: 0 20% 20% 0;
-      }
-      .fade {
-        animation-name: fade;
-        animation-duration: 1s;
-      }
-      
-      @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-      }
-}
-
-
-
 /**********KONIEC STYLU MAINA******************/
 #stopa{
     margin-left: auto;
@@ -361,8 +487,7 @@ body{
 
 .dane-kontakt{
     float: left;
-    width: 30%;
-    font-family: 'Roboto Mono', monospace;
+    width: 30%
 }
 
 .kontakt-tt{
@@ -379,10 +504,6 @@ body{
 }
 
 .kontakt{
-    color:rgb(14, 219, 255);
-}
-.kontakt a{
-    text-decoration: none;
     color:rgb(14, 219, 255);
 }
 
@@ -421,30 +542,9 @@ body{
     transform:scale(1.05);
 }
 
-@media only screen and (max-width:1200px){
-    #stopa{
-        width: 100%;
-    }
-}
-
 @media only screen and (max-width:800px){
-    .sponsorzy1{
+    .sponsorzy1 ,.sponsorzy2{
         display: block;
-        justify-content: center;
-    }
-    #stopa{
-        justify-content: center;
-    }
-    .dane-kontakt{
-        text-align: center;
-    }
-
-    .main{
-        width: 95%;
-    }
-
-    .baner{
-        width: 100%;
     }
 
     .dane-kontakt{
@@ -454,13 +554,12 @@ body{
 
     .spons{
         clear: both;
-        align-items: center;
     }
 
     .sponsorzy1 img,.sponsorzy2 img{
         filter: grayscale(1);
-        margin: 0 20px;
-        width: 100%;
+        margin: 5px;
+        width: 40%;
         object-fit: contain;
         transition: all .25s ease-out;
         margin-left: auto;
