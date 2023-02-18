@@ -9,7 +9,7 @@ html {
   }
 
 body{
-    margin-top: 5px;
+    /* margin-top: 5px; */
     background-color: #dfe6e9;
 }
 
@@ -36,8 +36,8 @@ body{
 
 :root {
     --kolor-tla: rgb(19, 82, 141);
-    --navbar-height: 56px;
-    --navbar-background-color: #54557c;
+    --navbar-height: 50px;
+    --navbar-background-color: rgb(19, 82, 141);
     --navbar-item-text-color: #ffffff;
     --navbar-item-background-color: rgb(19, 82, 141);
     --navbar-item-text-color-hover: rgb(149, 232, 247);
@@ -47,7 +47,7 @@ body{
   }
   
   .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -83,7 +83,7 @@ body{
   }
   
   .nav {
-    position: fixed;
+    position: sticky;
     top: 40px;
     left: 0px;
     right: 0px;
@@ -179,7 +179,7 @@ body{
   }
   
   .dropdown a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-weight: normal;
   }
@@ -278,7 +278,8 @@ body{
 /***********KONIEC STYLU NAWIGACJI**************/
 .main{
     min-height: 100vh;
-    border: 1px black solid;
+    /* border: 1px black solid; */
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 1);
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -288,7 +289,7 @@ body{
 .central{
     width: 100%;
     height: 75%;
-    border: solid black 1px;
+    /* border: solid black 1px; */
     margin-bottom: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -298,7 +299,7 @@ body{
 .kierunki{
     width: 100%;
     min-height: 25%;
-    border: solid black 1px;
+    /* border: solid black 1px; */
     margin-bottom: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -312,6 +313,11 @@ body{
     margin: 5px;
     float: left;
     cursor: pointer;
+    transition: all .3s;
+}
+
+.kierunek:hover{
+    transform: scale(1.05);
 }
 
 .czysty{
@@ -375,7 +381,7 @@ body{
     background-size:cover;
 }
 #zdj3{
-    background-image: url("../img/zdj3.png");
+    background-image: url("../img/zdj3.jpg");
     background-repeat: no-repeat;
     background-size:cover;
 }
@@ -475,6 +481,9 @@ body{
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+    .full-img img{
+        width: 90%;
     }
     .kierunek{
         display: none;
@@ -637,7 +646,7 @@ body{
     }
 
     .sponsorzy1 img,.sponsorzy2 img{
-        filter: grayscale(1);
+        filter: grayscale(0);
         margin: 0 20px;
         width: 100%;
         object-fit: contain;
@@ -645,9 +654,5 @@ body{
         margin-left: auto;
         margin-right: auto;
     }
-}
-
-#zegar{
-    border: 1px solid black;
 }
 /**********KONIEC STYLU FOOTERA***************/

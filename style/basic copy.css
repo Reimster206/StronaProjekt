@@ -39,8 +39,8 @@ body{
   }
   
   .navbar {
-    position: fixed;
     top: 0;
+    position: sticky;
     left: 0;
     width: 100%;
     height: var(--navbar-height);
@@ -75,7 +75,7 @@ body{
   }
   
   .nav {
-    position: fixed;
+    position: sticky;
     top: 40px;
     left: 0px;
     right: 0px;
