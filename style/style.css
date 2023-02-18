@@ -320,7 +320,7 @@ body{
 
 .post{
     width: 80%;
-    min-height: 25vh;
+    min-height: 27vh;
     margin: 5px;
     padding: 5px;
     display: flex;
@@ -334,7 +334,7 @@ body{
 .zdj-post{
     border: 1px solid green;
     width: 30%;
-    height: 25vh;
+    height: 27vh;
     margin:5px;
     cursor: pointer;
 }
@@ -374,13 +374,24 @@ body{
     background-repeat: no-repeat;
     background-size:cover;
 }
+#zdj3{
+    background-image: url("../img/zdj3.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+#zdj4{
+    background-image: url("../img/zdj4.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
 
 .tekst-post{
     width: 70%;
-    min-height: 25vh;
+    min-height: 28vh;
     padding: 5px;
     margin: 5px;
     overflow: hidden;
+    transition: display 0.5s ease;
 
 }
 .wiecej{
@@ -389,6 +400,11 @@ body{
 }
 
 .przycisk1{
+  z-index: 100;
+  margin-bottom: 4px;
+  margin-right: 10px;
+  right: 0;
+  position: absolute;
   background: #7c7c7c;
   border-radius: 4px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
@@ -451,6 +467,10 @@ body{
     cursor: none;
 }
 @media only screen and (max-width:600px){
+    .przycisk1{
+        margin-bottom: 4px;
+        margin-right: 0;
+    }
     .post{
         justify-content: center;
         align-items: center;
