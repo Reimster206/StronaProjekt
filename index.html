@@ -31,11 +31,22 @@
     </head>
     <body> <!--usunalem onload="godzina()"-->
     <div class="container">
-    <nav class="navi">
-        <ul class="menu">
-            <li class="nav-poz"><a href="#" class="poz">Strona Główna</a></li>                                                                            <!--POCZATEK NAWIGACJI-->
-            <li class="nav-poz" onclick="arrow()">O szkole &raquo
-                <ul class="podnavi" id="podnaviP">
+        <div class="navbar">
+
+            <label for="togglericon" class="toggler" checked></label>
+            <input type="checkbox" id="togglericon" class="toggler" />
+        
+            <div class="nav at-center">
+              <!-- reposition the menu with: -->
+              <!-- div class="nav at-center" -->
+              <!-- div class="nav at-right"  -->
+        
+              <a href="../index.html">Strona główna</a>
+        
+              <div class="dropdown">
+                <label for="toggle-1">O szkole</label>
+                <input type="checkbox" id="toggle-1" />
+                <ul>
                     <li class="nav-pod"><a href="#" class="poz1">Dyrekcja i kierownictwo szkoły</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Zarys Historyczny</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Nauczyciele i Pracownicy niepedagogiczni ZSE</a></li>
@@ -46,31 +57,28 @@
                     <li class="nav-pod"><a href="#" class="poz1">Plan pracy szkoły</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Rada rodziców ZSE</a></li>
                 </ul>
-            </li>
-            <li class="nav-poz">Oferta Edukacyjna &raquo
-                <ul class="podnavi">
+              </div>
+        
+              <div class="dropdown">
+                <label for="toggle-2">Oferta Edukacyjna</label>
+                <input type="checkbox" id="toggle-2" />
+                <ul>
                     <li class="nav-pod"><a href="#" class="poz1">Kierunki kształcenia 2022/2023</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Zasady rekrutacji 2022/2023</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Badania do szkoły 2022/2023</a></li>
-                    <li class="nav-pod"><a href="html/kierunki.html" class="poz1">Profile w szkole</a>
-                        <!--<ul class="podnavi2">
-                            <li class="nav-pod2"><a href="#" class="poz2">Technik mechatronik</a></li>
-                            <li class="nav-pod2"><a href="#" class="poz2">Technik informatyk</a></li>
-                            <li class="nav-pod2"><a href="#" class="poz2">Technik elektronik</a></li>
-                            <li class="nav-pod2"><a href="#" class="poz2">Technik robotyk</a></li>
-                            <li class="nav-pod2"><a href="#" class="poz2">Technik automatyk</a></li>
-                            <li class="nav-pod2"><a href="#" class="poz2">Technik programista</a></li>
-                        </ul>-->
-                    </li>
+                    <li class="nav-pod"><a href="html/kierunki.html" class="poz1">Profile w szkole</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Harmonogram rekrutacji 2022/2023</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">ROZPORZĄDZENIE MINISTRA EDUKACJI NARODOWEJ  z dnia 21 sierpnia 2019</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Informacja o kształceniu w polskim systemie oświaty osób przybywających z zagranicy</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Wykaz zawodów wiedzy, artystycznych i sportowych 2022 r.</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Przedmiotowe Wymagania Edukacyjne</a></li>
                 </ul>
-            </li>
-            <li class="nav-poz">Strefa Ucznia &raquo
-                <ul class="podnavi">
+              </div>
+
+              <div class="dropdown">
+                <label for="toggle-3">Strefa ucznia</label>
+                <input type="checkbox" id="toggle-3" />
+                <ul>
                     <li class="nav-pod"><a href="#" class="poz1">COVID</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Dokumenty</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Egzaminy - informacje</a></li>
@@ -85,20 +93,22 @@
                     <li class="nav-pod"><a href="#" class="poz1">Druki do pobrania</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Godziny dostępości nauczycieli</a></li>
                 </ul>
-            </li>
-            <li class="nav-poz">Ogłoszenia &raquo
-                <ul class="podnavi">
+              </div>
+
+              <div class="dropdown">
+                <label for="toggle-4">Ogłoszenia</label>
+                <input type="checkbox" id="toggle-4" />
+                <ul>
                     <li class="nav-pod"><a href="#" class="poz1">Sekretariat i Księgowość</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Dyrekcja szkoły</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Konkursy i olimipady</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Sport i rekreacja</a></li>
                 </ul>
-            </li>
-            <a href="#stopa"><li class="nav-poz">Kontakt &raquo</a>
-            </li>
-        </ul>  
-        <span class="material-symbols-outlined" id="menu-icon" onclick="menutoggle()">menu</span>                                                                                                     <!--KONIEC NAWIGACJI-->
-    </nav>
+              </div>
+
+              <a href="#">Kontakt</a>
+            </div>
+          </div>
     <div class="baner">
         <p>Zespół Szkół Elektronicznych<br>im. Bohaterów Westerplatte w Radomiu</p>
     </div>
