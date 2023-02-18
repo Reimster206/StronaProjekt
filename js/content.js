@@ -1,11 +1,13 @@
-function wiecej(){
-    let d = document.querySelector(".wiecej");
-    let p = document.querySelector(".przycisk1");
-    if(d.style.display == "inline"){
-        d.style.display = "none";
-        p.innerHTML = "czytaj wiecej";
+function wiecej(n){
+    let d = document.querySelectorAll(".wiecej");
+    let p = document.querySelectorAll(".przycisk1");
+    let a = document.querySelectorAll(".to");
+
+    if(d[n].style.display == "inline"){
+        d[n].style.display = "none";
+        p[n].innerHTML = "czytaj wiecej";
     }else{
-        d.style.display = "inline";
-        p.innerHTML = "czytaj mniej";
+        d[n].style.display = "inline";
+        p[n].innerHTML = "czytaj mniej";
     }
 }

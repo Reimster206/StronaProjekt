@@ -14,6 +14,7 @@ html {
 
 body{
     margin-top: 5px;
+    background-color: #dfe6e9;
 }
 
 .baner{
@@ -43,6 +44,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 
 .navi{
@@ -226,7 +228,6 @@ body{
 .kierunek{
     width: 200px;
     height: 200px;
-    border: red 1px solid;
     display: inline;
     margin: 5px;
     float: left;
@@ -240,11 +241,14 @@ body{
 .post{
     width: 80%;
     min-height: 25vh;
-    border: 1px solid red;
     margin: 5px;
     padding: 5px;
     display: flex;
     position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    z-index: 10;
 }
 
 .zdj-post{
@@ -256,7 +260,6 @@ body{
 }
 
 .tekst-post{
-    border: 1px solid yellow;
     width: 70%;
     min-height: 25vh;
     padding: 5px;
@@ -269,6 +272,32 @@ body{
     display: none;
 }
 
+.przycisk1{
+  background: #7c7c7c;
+  border-radius: 4px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 4px 9px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  font-variant: small-caps;
+}
+.przycisk1:hover{
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+    background-color: #6c6c6c;
+}
 
 @media only screen and (max-width:950px){
     .post{
