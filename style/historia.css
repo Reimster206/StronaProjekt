@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+:root{
+    --kolor-tla: rgb(19, 82, 141);
+}
+
 html {
     scroll-behavior: smooth;
   }
@@ -22,20 +26,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../img/baner1.png");
-    background-repeat: no-repeat;
-    background-size:cover;
-    text-align: center;
-}
-
-.baner p{
-    color: #fff;
-    font-size: 290%;
-    font-family: 'Bebas Neue', cursive;
 }
 
 :root {
-    --kolor-tla: rgb(19, 82, 141);
     --navbar-height: 56px;
     --navbar-background-color: #54557c;
     --navbar-item-text-color: #ffffff;
@@ -274,6 +267,146 @@ body{
     }
 
   }
+  
+/*****************POCZATEK STYLU NAWIGACJI*****************/
+.menu{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navi{
+    background-color: var(--kolor-tla);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    top: 0;
+    position: sticky;
+}
+
+.podnavi{
+    width: 20%;
+    padding: 12px 0 0 0;
+    transition: all .5s ease-out;
+}
+
+.navi .menu li,.navi .menu a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.material-symbols-outlined{
+    position: absolute;
+}
+
+#menu-icon{
+    text-align: right;
+}
+
+.menu > li{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width:20%;
+    min-width: fit-content;
+    padding: 10px 0 0 0;
+    text-align: center;
+    transition: all .5s ease-out;
+}
+
+
+.menu > li:hover{
+    background-color: rgb(49, 155, 255);
+    cursor: pointer;
+}
+
+.menu .nav-poz:hover .podnavi{
+    display: block;
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu > li > .podnavi{
+    transition: all .25s ease;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.menu > li > ul > li{
+    padding: 5px 0 5px 0;
+    list-style: none;
+    text-decoration: none;
+    background-color: rgb(49, 155, 255);
+    max-width: 94vw;
+    transition: all .25s ease;
+}
+
+.menu > li > ul > li:hover{
+    background-color: rgb(25, 122, 212);
+}
+
+.menu > li > ul > li > ul >li{
+    background-color: aqua;
+    list-style: none;
+    text-decoration: none;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav-pod .podnavi2{
+    transition: all .25s ease;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.podnvai2 li{
+    transition: all .5s ease;
+    width: 90%;
+}
+
+.nav-pod:hover .podnavi2{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+#menu-icon{
+    display: none;
+}
+@media only screen and (max-width: 800px){
+    .navi{
+        height: 7vh;
+    }
+    .navi ul{
+        position: absolute;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        
+    }
+    .menu{
+        display: none;
+    }
+    .navi ul li{
+        display: block;
+    }
+    .navi ul li a{
+        color: #fff;
+    }
+    #menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
 
 /***********KONIEC STYLU NAWIGACJI**************/
 .main{
@@ -283,6 +416,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
+    position: relative;
 } 
 
 .central{
@@ -293,240 +427,171 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.kierunki{
-    width: 100%;
-    min-height: 25%;
-    border: solid black 1px;
-    margin-bottom: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.kierunek{
-    width: 200px;
-    height: 200px;
-    display: inline;
-    margin: 5px;
-    float: left;
-    cursor: pointer;
-}
-
-.czysty{
-    clear: both;
-}
-
-.post{
-    width: 80%;
-    min-height: 27vh;
-    margin: 5px;
-    padding: 5px;
-    display: flex;
     position: relative;
-    background-color: #fff;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
-    border-radius: 2px;
+}
+.timeline{
+    position: relative;
+    max-width: 100%;
+    margin: 100px auto;
+}
+.cont{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+@keyframes movedown {
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.cont:nth-child(1){
+    animation-delay: 0s;
+}
+.cont:nth-child(2){
+    animation-delay: 1s;
+}
+.cont:nth-child(3){
+    animation-delay: 2s;
+}
+.cont:nth-child(4){
+    animation-delay: 3s;
+}
+.cont:nth-child(5){
+    animation-delay: 4s;
+}
+.cont:nth-child(6){
+    animation-delay: 5s;
+}
+.cont:nth-child(7){
+    animation-delay: 6s;
+}
+.cont:nth-child(8){
+    animation-delay: 7s;
+}
+.cont:nth-child(9){
+    animation-delay: 8s;
+}
+.cont:nth-child(10){
+    animation-delay: 9s;
+}
+.cont:nth-child(11){
+    animation-delay: 10s;
+}
+.cont:nth-child(12){
+    animation-delay: 11s;
+}
+.text-box{
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+.left-cont{
+    left: 0;
+}
+.right-cont{
+    left: 50%;
+}
+.cont img{
+    position: absolute;
+    width: 50px;
+    border-radius: 50%;
+    right: -25px;
+    top: 32px;
     z-index: 10;
 }
-
-.zdj-post{
-    border: 1px solid green;
-    width: 30%;
-    height: 27vh;
-    margin:5px;
-    cursor: pointer;
+.right-cont img{
+    left: -25px;
 }
-.full-img{
-    visibility: hidden;
-    transition: visibility 0.5s ease;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0,0, 0.7);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.full-img img{
-    width: 40%;
-    max-width: 500px;
-}
-.full-img span{
+.timeline::after{
+    content: '';
     position: absolute;
-    top: 5%;
-    right: 5%;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
+    width: 6px;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    animation: moveline 12s linear forwards;
 }
-#zdj1{
-    background-image: url("../img/zdj1.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-}
-#zdj2{
-    background-image: url("../img/zdj2.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-}
-#zdj3{
-    background-image: url("../img/zdj3.png");
-    background-repeat: no-repeat;
-    background-size:cover;
-}
-#zdj4{
-    background-image: url("../img/zdj4.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-}
-
-.tekst-post{
-    width: 70%;
-    min-height: 28vh;
-    padding: 5px;
-    margin: 5px;
-    overflow: hidden;
-    transition: display 0.5s ease;
-
-}
-.wiecej{
-    max-height: fit-content;
-    display: none;
-}
-
-.przycisk1{
-  z-index: 100;
-  margin-bottom: 4px;
-  margin-right: 10px;
-  right: 0;
-  position: absolute;
-  background: #7c7c7c;
-  border-radius: 4px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
-  box-sizing: border-box;
-  color: #000000;
-  cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 12px;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 4px 9px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
-  font-variant: small-caps;
-}
-.przycisk1:hover{
-    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
-    background-color: #6c6c6c;
-}
-
-@media only screen and (max-width:950px){
-    .post{
-        width:90%;
+@keyframes moveline {
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
     }
 }
 
-@media only screen and (max-width:910px){
-    .post{
-        width:90%;
-    }
-
-    .zdj-post,.tekst-post{
-        width: 50%;
-    }
-
+.text-box h2{
+    font-weight: 600;
+}
+.text-box small{
+    display: inline;
+    margin-bottom: 15px;
+}
+.Larrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgb(255, 255, 255);
+    right: -14px;
+}
+.Rarrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgb(255, 255, 255);
+    left: -14px;
 }
 
-@media only screen and (max-width:750px){
-    .post{
-        width:80%;
-        justify-content: center;
-        flex-wrap: wrap;
+@media screen and (max-width: 600px) {
+    .timeline{
+        margin: 50px auto;
     }
-
-    .zdj-post,.tekst-post{
-        width: 90%;
+    .timeline::after{
+        left: 31px;
     }
-
-}
-
-/*slider*/
-.prev,.next{
-    color: #ffffff00;
-    cursor: none;
-}
-@media only screen and (max-width:600px){
-    .przycisk1{
-        margin-bottom: 4px;
-        margin-right: 0;
-        position: relative;
+    .cont{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
     }
-    .post{
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    .text-box{
+        font-size: 13px;
     }
-    .kierunek{
-        display: none;
-        width: 250px;
-        height: 250px;
-        border: 1px solid red;
-        margin: 5px;
+    .text-box small{
+        margin-bottom: 10px;
     }
-    .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 73%;
-        width: auto;
-        margin-top: -22px;
-        padding: 16px;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        background-color: rgba(0,0,0,0.2);
-      }
-      .next {
-        right: 0;
-        border-radius: 20% 0 0 20%;
-      }
-      .prev{
+    .right-cont{
         left: 0;
-        border-radius: 0 20% 20% 0;
-      }
-      .next:hover {
-        background-color: rgba(0,0,0,0.6);
-        border-radius: 20% 0 0 20%;
-      }
-      .prev:hover{
-        background-color: rgba(0,0,0,0.6);
-        border-radius: 0 20% 20% 0;
-      }
-      .fade {
-        animation-name: fade;
-        animation-duration: 1s;
-      }
-      
-      @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-      }
+    }
+    .left-cont img, .right-cont img{
+        left: 10px;
+    }
+    .Larrow, .Rarrow{
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -14px;
+    }
 }
-
-
 
 /**********KONIEC STYLU MAINA******************/
 #stopa{
@@ -541,8 +606,7 @@ body{
 
 .dane-kontakt{
     float: left;
-    width: 30%;
-    font-family: 'Roboto Mono', monospace;
+    width: 30%
 }
 
 .kontakt-tt{
@@ -559,10 +623,6 @@ body{
 }
 
 .kontakt{
-    color:rgb(14, 219, 255);
-}
-.kontakt a{
-    text-decoration: none;
     color:rgb(14, 219, 255);
 }
 
@@ -601,30 +661,9 @@ body{
     transform:scale(1.05);
 }
 
-@media only screen and (max-width:1200px){
-    #stopa{
-        width: 100%;
-    }
-}
-
 @media only screen and (max-width:800px){
-    .sponsorzy1{
+    .sponsorzy1 ,.sponsorzy2{
         display: block;
-        justify-content: center;
-    }
-    #stopa{
-        justify-content: center;
-    }
-    .dane-kontakt{
-        text-align: center;
-    }
-
-    .main{
-        width: 95%;
-    }
-
-    .baner{
-        width: 100%;
     }
 
     .dane-kontakt{
@@ -634,13 +673,12 @@ body{
 
     .spons{
         clear: both;
-        align-items: center;
     }
 
     .sponsorzy1 img,.sponsorzy2 img{
         filter: grayscale(1);
-        margin: 0 20px;
-        width: 100%;
+        margin: 5px;
+        width: 40%;
         object-fit: contain;
         transition: all .25s ease-out;
         margin-left: auto;
