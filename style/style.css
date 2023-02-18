@@ -359,7 +359,7 @@ body{
     align-items: center;
 }
 .full-img img{
-    width: 40%;
+    width: 60%;
     max-width: 500px;
 }
 .full-img span{
@@ -617,22 +617,13 @@ body{
 
 @media only screen and (max-width:800px){
     .sponsorzy1{
-        display: block;
-        justify-content: center;
+        width: 100%;
     }
     #stopa{
         justify-content: center;
     }
     .dane-kontakt{
         text-align: center;
-    }
-
-    .main{
-        width: 95%;
-    }
-
-    .baner{
-        width: 100%;
     }
 
     .dane-kontakt{
@@ -642,7 +633,18 @@ body{
 
     .spons{
         clear: both;
-        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .baner{
+        width: 100%;
+    }
+
+    .main{
+        width: 95%;
     }
 
     .sponsorzy1 img,.sponsorzy2 img{
