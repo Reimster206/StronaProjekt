@@ -16,12 +16,14 @@ if(screen.width<600){
     setTimeout(showSlides, 2000); 
 }*/
 
+var slider;
 
-let slideIndex = 0;
+let slideIndex = 2;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  clearTimeout(slider);
+  showSlides(slideIndex += n-1);
 }
 
 function currentSlide(n) {
@@ -32,12 +34,12 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("kierunek");
   if (slideIndex==slides.length) {slideIndex=0}
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {slideIndex = 0}
+  if (n < 0) {slideIndex = slides.length-1}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   slideIndex++;
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 3000); 
+  slider = setTimeout(showSlides, 3000); 
 }

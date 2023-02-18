@@ -18,7 +18,7 @@
         <script src="js/script.js"></script>
         <title>Elektronik Radom</title>
     </head>
-    <body> <!--usunalem onload="godzina()"-->
+    <body>
     <div class="container">
         <div class="navbar">
 
@@ -26,9 +26,6 @@
             <input type="checkbox" id="togglericon" class="toggler" />
         
             <div class="nav at-center">
-              <!-- reposition the menu with: -->
-              <!-- div class="nav at-center" -->
-              <!-- div class="nav at-right"  -->
         
               <a href="../index.html">Strona główna</a>
         
@@ -37,7 +34,7 @@
                 <input type="checkbox" id="toggle-1" />
                 <ul>
                     <li class="nav-pod"><a href="#" class="poz1">Dyrekcja i kierownictwo szkoły</a></li>
-                    <li class="nav-pod"><a href="../html/historia.html" class="poz1">Zarys Historyczny</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Zarys Historyczny</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Nauczyciele i Pracownicy niepedagogiczni ZSE</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">O Bohaterach Westerplatte - Patron</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Statut Technikum w Zespole Szkół Elektronicznych</a></li>
@@ -104,8 +101,10 @@
     <div class="main">
         <h2 class="tts-kierunki">Wybierz swoją drogę!</h2>
         <ul class="proba">
-            <li style="color:rgb(49, 155, 255);" id="prg"><a onclick="prg()" href="#" data-text="&nbsp;Programista">&nbsp;Programista&nbsp;</a></li>
-            <div class="kierunek-prg kier">
+            <li style="color:rgb(49, 155, 255);" id="prg"><a onclick="prg()" onblur="reset()" href="#" data-text="&nbsp;Programista">&nbsp;Programista&nbsp;</a></li>
+            <div class="kierunek-prg">
+                <div class="tresc">
+                <div class="text">
                 Utworzenie nowego kierunku na poziomie szkoły technicznej jest odpowiedzią na zapotrzebowanie regionalnego rynku pracy, pracodawców sektora IT oraz instytucji otoczenia biznesu, którzy zgodnie potwierdzają wyraźny deficyt kandydatów do pracy w zawodzie programisty, wykształconych na poziomie szkoły ponadgimnazjalnej oraz konieczność wypełnienia wolnych miejsc na rynku pracy właśnie na stanowiskach związanych z programowaniem i testowaniem oprogramowania.
                 <br><br>
                 Programista to jeden z najlepiej zarabiających i najbardziej poszukiwanych na rynku pracy zawodów. Aby nim zostać, potrzeba kwalifikacji i umiejętności. Technik programista jest znakomitym wyborem drogi życiowej dla wszystkich, którzy z ciekawością patrzą na komputery, oraz nie przerażają ich przedmioty ścisłe. Programowanie to nie tylko pieniądze, to ciekawa pasja dająca m. in. możliwość programowania robotów, pisania gier 3D, aplikacji mobilnych, desktopowych i robienia wielu innowacyjnych, kreatywnych rzeczy (inteligentne domy itp.)<br><br>
@@ -129,23 +128,26 @@
                 Zdobycie wykształcenia na poziomie szkoły technicznej w zawodzie technik programista umożliwi absolwentom kontynuację nauki na wyższych szkołach politechnicznych lub uniwersytetach, a także pozwoli na rozpoczęcie własnej drogi zawodowej poprzez podjęcie pracy w zdobytym zawodzie w jednej z firm naszego regionu lub poprzez samozatrudnienie.<br><br><br><br>
                 Zapraszamy do nas, ucz się z najlepszymi w elektroniku!
             </div>
-            <li style="color:rgb(49, 155, 255);" id="inf"><a onclick="inf()" href="#" data-text="&nbsp;informatyk">&nbsp;informatyk&nbsp;</a></li>
+            <div class="zdjecia"><img src="../img/programista.png" alt="programista"></div>
+            </div>
+            </div>
+            <li style="color:rgb(49, 155, 255);" id="inf"><a onclick="inf()" onblur="reset()" href="#" data-text="&nbsp;informatyk">&nbsp;informatyk&nbsp;</a></li>
             <div class="kierunek-inf kier">
                 sraczka2
             </div>
-            <li style="color:rgb(49, 155, 255);" id="mch"><a onclick="mech()" href="#" data-text="&nbsp;Mechatronik">&nbsp;Mechatronik&nbsp;</a></li>
+            <li style="color:rgb(49, 155, 255);" id="mch"><a onclick="mech()" onblur="reset()" href="#" data-text="&nbsp;Mechatronik">&nbsp;Mechatronik&nbsp;</a></li>
             <div class="kierunek-mech kier">
                 sraczka3
             </div>
-            <li style="color:rgb(49, 155, 255);" id="rbt"><a onclick="rob()" href="#" data-text="&nbsp;Robotyk">&nbsp;Robotyk&nbsp;</a></li>
+            <li style="color:rgb(49, 155, 255);" id="rbt"><a onclick="rob()" onblur="reset()" href="#" data-text="&nbsp;Robotyk">&nbsp;Robotyk&nbsp;</a></li>
             <div class="kierunek-rob kier">
                 sraczka4
             </div>
-            <li style="color:rgb(49, 155, 255);" id="aut"><a onclick="aut()" href="#" data-text="&nbsp;Automatyk">&nbsp;Automatyk&nbsp;</a></li>
+            <li style="color:rgb(49, 155, 255);" id="aut"><a onclick="aut()" onblur="reset()" href="#" data-text="&nbsp;Automatyk">&nbsp;Automatyk&nbsp;</a></li>
             <div class="kierunek-aut kier">
                 sraczka5
             </div>
-            <li style="color:rgb(49, 155, 255);" id="ele"><a onclick="ele()" href="#" data-text="&nbsp;Elektronik">&nbsp;Elektronik&nbsp;</a></li>
+            <li style="color:rgb(49, 155, 255);" id="ele"><a onclick="ele()" onblur="reset()" href="#" data-text="&nbsp;Elektronik">&nbsp;Elektronik&nbsp;</a></li>
             <div class="kierunek-ele kier">
                 sraczka6
             </div>
@@ -153,7 +155,6 @@
     </div>                                                                                                                  
     <footer>
         <div id="stopa">
-
         <div class="dane-kontakt">
             <p class="kontakt-tt">Dane teleadresowe</p>
             <p class="kontakt-im">Zespół Szkół Elektronicznych<br>im. Bohaterów Westerplatte</p>
@@ -185,47 +186,13 @@
             <div class="sposer">
                 <img src="../img/radwagLogo.png" alt="radwag">
             </div>
-            
-            
-            
-            
-        <!--</div>
-        <div class="sponsorzy2">-->
-            
-            
-            
-            
         </div>
     </div>
 </div>
-    </footer>                                                                                                        <!--POCZATEK STOPKI-->
-        <!--<div id="zegar">
-            
-        </div>-->
-    </div>                                                                                                                 <!--KONIEC STOPKI--> 
+    </footer>
+    </div>
     </body>
     <script>
-    /*
-    let icon=document.querySelector('.material-symbols-outlined');
-    icon.innerHTML="expand_more";
-    let podPozP=document.querySelector('#podnaviP');
-    
-    function arrow(){
-        if(podPozP.style.display=="none"){
-            podPozP.style.display="block";
-            podPozP.style.position="absolute";
-            icon.innerHTML="close";
-        }else{
-            podPozP.style.display="none";
-            icon.innerHTML="expand_more";
-        }
-
-        //podPozP.style.display="block";
-        //podPozP.style.position="absolute";
-        
-    }*/
-    
-    
     var prgb = document.querySelector(".kierunek-prg");
     var infb = document.querySelector(".kierunek-inf");
     var mechb = document.querySelector(".kierunek-mech");
@@ -233,12 +200,14 @@
     var autb = document.querySelector(".kierunek-aut");
     var eleb = document.querySelector(".kierunek-ele");
 
-    prgb.style.display="none";
-    infb.style.display="none";
-    mechb.style.display="none";
-    robb.style.display="none";
-    autb.style.display="none";
-    eleb.style.display="none";
+    function reset(){
+        prgb.style.display="none";
+        infb.style.display="none";
+        mechb.style.display="none";
+        robb.style.display="none";
+        autb.style.display="none";
+        eleb.style.display="none";
+    }
 
     function prg(){
         prgb.style.display="block";

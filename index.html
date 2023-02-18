@@ -30,7 +30,7 @@
         <script src="js/galeria.js"></script>
         <title>Elektronik Radom</title>
     </head>
-    <body> <!--usunalem onload="godzina()"-->
+    <body> 
         
     <div class="container">
         <div class="navbar">
@@ -39,10 +39,6 @@
             <input type="checkbox" id="togglericon" class="toggler" />
         
             <div class="nav at-center">
-              <!-- reposition the menu with: -->
-              <!-- div class="nav at-center" -->
-              <!-- div class="nav at-right"  -->
-        
               <a href="../index.html">Strona główna</a>
         
               <div class="dropdown">
@@ -82,6 +78,7 @@
                 <input type="checkbox" id="toggle-3" />
                 <ul>
                     <li class="nav-pod"><a href="#" class="poz1">COVID</a></li>
+                    <li class="nav-pod"><a href="#" class="poz1">Plan lekcji</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Dokumenty</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Egzaminy - informacje</a></li>
                     <li class="nav-pod"><a href="#" class="poz1">Pracownie i warsztaty</a></li>
@@ -156,8 +153,12 @@
                     
                 </div>
             </div>
+            <div class="full-img"  id="fullImgBox">
+                <img src="img/zdj2.jpg" alt="zdj2" id="fullImg">
+                <span onclick="closeImg()">&#10006;</span>
+            </div>
             <div class="post">
-                <div class="zdj-post" id="zdj2">
+                <div class="zdj-post" id="zdj2" onclick="openImg(2)">
                     
                 </div>
                 <div class="tekst-post">
@@ -186,8 +187,12 @@
                 </div>
                 
             </div>
+            <div class="full-img"  id="fullImgBox">
+                <img src="img/zdj3.jpg" alt="zdj3" id="fullImg">
+                <span onclick="closeImg()">&#10006;</span>
+            </div>
             <div class="post">
-                <div class="zdj-post" id="zdj3"></div>
+                <div class="zdj-post" id="zdj3" onclick="openImg(3)"></div>
                 <div class="tekst-post">
                     <p>
                         <span class="to">
@@ -203,8 +208,12 @@
                     </p>
                 </div>
             </div>
+            <div class="full-img"  id="fullImgBox">
+                <img src="img/zdj4.jpg" alt="zdj4" id="fullImg">
+                <span onclick="closeImg()">&#10006;</span>
+            </div>
             <div class="post">
-                <div class="zdj-post" id="zdj4"></div>
+                <div class="zdj-post" id="zdj4" onclick="openImg(4)"></div>
                 <div class="tekst-post">
                     <p>
                         Uczniowie klas 4 klas o kierunku technik automatyk, technik informatyk, technik elektronik, 
@@ -214,7 +223,8 @@
                         <br>
                         realizowanego w ramach programu Erasmus+ akcji: Mobilność edukacyjna współfinansowanego ze środków 
                         Unii Europejskiego i wypełnienie w nieprzekraczalnym terminie do 5/01/2023r formularza zgłoszeniowego 
-                        wraz ze zgodami i wymaganymi zaświadczeniami z Urzędu Skarbowego. 
+                        wraz ze zgodami i wymaganymi zaświadczeniami z Urzędu Skarbowego.
+                        <br>
                         <span class="wiecej"> Wypełniony i wydrukowany formularz zgłoszeniowy z zaświadczeniami należy osobiście złożyć
                         do p. Wojciecha Popielarskiego sala 312/216.
                         <br>
@@ -265,41 +275,7 @@
             
         </div>    
         </div>    
-            
-        <!--</div>
-        <div class="sponsorzy2">-->
-            
-            
-            
-            
-        
-    
-</div>
-    </footer>                                                                                                        <!--POCZATEK STOPKI-->
-        <!--<div id="zegar">
-            
-        </div>-->
-    </div>                                                                                                                 <!--KONIEC STOPKI--> 
-    </body>
-    <script>
-    /*
-    let icon=document.querySelector('.material-symbols-outlined');
-    icon.innerHTML="expand_more";
-    let podPozP=document.querySelector('#podnaviP');
-    
-    function arrow(){
-        if(podPozP.style.display=="none"){
-            podPozP.style.display="block";
-            podPozP.style.position="absolute";
-            icon.innerHTML="close";
-        }else{
-            podPozP.style.display="none";
-            icon.innerHTML="expand_more";
-        }
-
-        //podPozP.style.display="block";
-        //podPozP.style.position="absolute";
-        
-    }*/
-  </script>
+        </div>
+    </footer>
+    </div>    
 </html>
