@@ -336,7 +336,43 @@ body{
     width: 30%;
     height: 25vh;
     margin:5px;
-
+    cursor: pointer;
+}
+.full-img{
+    visibility: hidden;
+    transition: visibility 0.5s ease;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0,0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.full-img img{
+    width: 40%;
+    max-width: 500px;
+}
+.full-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+#zdj1{
+    background-image: url("../img/zdj1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+#zdj2{
+    background-image: url("../img/zdj2.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .tekst-post{
@@ -415,6 +451,11 @@ body{
     cursor: none;
 }
 @media only screen and (max-width:600px){
+    .post{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
     .kierunek{
         display: none;
         width: 250px;

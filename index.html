@@ -27,9 +27,11 @@
         <script src="js/script.js"></script>
         <script src="js/slider.js"></script>
         <script src="js/content.js"></script>
+        <script src="js/galeria.js"></script>
         <title>Elektronik Radom</title>
     </head>
     <body> <!--usunalem onload="godzina()"-->
+        
     <div class="container">
         <div class="navbar">
 
@@ -106,9 +108,10 @@
                 </ul>
               </div>
 
-              <a href="#">Kontakt</a>
+              <a href="#stopa">Kontakt</a>
             </div>
           </div>
+          
     <div class="baner">
         <p>Zespół Szkół Elektronicznych<br>im. Bohaterów Westerplatte w Radomiu</p>
     </div>
@@ -136,9 +139,13 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>                                                                                                     
         <div class="central">
+            <div class="full-img"  id="fullImgBox">
+                <img src="img/zdj1.jpg" alt="zdj1" id="fullImg">
+                <span onclick="closeImg()">&#10006;</span>
+            </div>
             <div class="post">
-                <div class="zdj-post">
-                    <img src="img/zdj1.jpg" alt="zdj1" style="height: 100%; max-width: 100%;">
+                
+                <div class="zdj-post" id="zdj1" onclick="openImg(1)">
                 </div>
                 <div class="tekst-post">
                     <p>
@@ -151,8 +158,8 @@
                 </div>
             </div>
             <div class="post">
-                <div class="zdj-post">
-                    <img src="img/zdj2.jpg" alt="zdj2" style="height: 100%; max-width: 100%;">
+                <div class="zdj-post" id="zdj2">
+                    
                 </div>
                 <div class="tekst-post">
                     <p>
@@ -184,11 +191,11 @@
                 
             </div>
             <div class="post">
-                <div class="zdj-post"></div>
+                <div class="zdj-post" id="zdj3"></div>
                 <div class="tekst-post"></div>
             </div>
             <div class="post">
-                <div class="zdj-post"></div>
+                <div class="zdj-post" id="zdj4"></div>
                 <div class="tekst-post"></div>
             </div>
         </div>
