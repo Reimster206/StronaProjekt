@@ -288,6 +288,17 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .main-pod{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
   
   .tresc{
     width: 80%;
@@ -317,18 +328,21 @@
   }
 
   .duze-zdj-box{
+    position: relative;
     max-width: 500px;
     max-height: 500px;
     display: none;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5px;
   }
 
   .closebtn {
     position: absolute;
     top: 10px;
     right: 15px;
-    color: red;
+    color: white;
+    font-weight: bolder;
     font-size: 35px;
     cursor: pointer;
   }
@@ -340,6 +354,10 @@
     .tresc{
       width: 90%;
       text-align: center;
+    }
+
+    .main-pod{
+      width: 95%;
     }
   }
 
