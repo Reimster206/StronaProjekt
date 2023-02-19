@@ -188,7 +188,7 @@ body{
     justify-content: center;
   }
     
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
       .navbar #togglericon:checked ~ div.nav,
       .navbar #togglericon ~ div.nav {
         visibility: visible;

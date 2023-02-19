@@ -5,7 +5,6 @@ if(screen.width<600){
 var slider;
 
 let slideIndex = 1;
-showSlides(slideIndex);
 
 function plusSlides(n) {
   clearTimeout(slider);
