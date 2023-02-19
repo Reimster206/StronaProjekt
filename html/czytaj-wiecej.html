@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="icon" type="image/x-icon" href="../img/logo_bottom.jpg">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="../style/basic.css">
+        <link rel="stylesheet" href="../style/czytaj-wiecej.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,9 +25,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@300&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
         <script src="../js/script.js"></script>
-        <script src="../js/slider.js"></script>
         <script src="../js/content.js"></script>
-        <script src="../js/galeria.js"></script>
         <title>Elektronik Radom</title>
     </head>
     <body> 
@@ -112,33 +110,59 @@
     <div class="baner">
         <p>Zespół Szkół Elektronicznych<br>im. Bohaterów Westerplatte w Radomiu</p>
     </div>
-    <div class="main">
-        <div class="kierunki">
-            <div class="kierunek fade" style="display: block;">
-                <a href="../html/kierunki.html"><img src="../img/robotyk.png" alt="TRobotyk" style="width: 100%;" ></a>
-            </div>
-            <div class="kierunek fade">
-                <a href="../html/kierunki.html"><img src="../img/automatyk.png" alt="TAutomatyk" style="width: 100%;"></a>
-            </div>
-            <div class="kierunek fade">
-                <a href="../html/kierunki.html"><img src="../img/informatyk.png" alt="TInformatyk" style="width: 100%;"></a>
-            </div>
-            <div class="kierunek fade">
-                <a href="../html/kierunki.html"><img src="../img/mechatronik.png" alt="TMechatronik" style="width: 100%;"></a>
-            </div>
-            <div class="kierunek fade">
-                <a href="../html/kierunki.html"><img src="../img/programista.png" alt="TProgramista" style="width: 100%;"></a>
-            </div>
-            <div class="kierunek fade">
-                <a href="../html/kierunki.html"><img src="../img/elektronik.png" alt="TElektronik" style="width: 100%;"></a>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>                                                                                                     
+    <div class="main">                                                                      
         <div class="central">
-            
+            <h1 style="text-align: center;">Budujemy EKO-MIASTO LEGO</h1>
+            <div class="tresc">
+                W dniu 2 lutego nauczycielki języka angielskiego, Barbara Kostkiewicz i Magdalena Dygała zaangażowały 
+                uczniów klasy 3M w akcję ,,Budujemy EKO-MIASTO LEGO” w ramach międzynarodowego projektu ,,Climate Action 
+                Project”.<br>
+                Sama budowa miasta zajęła uczniom ponad 4 godziny. Do powstania miasta EKO wykorzystano ponad 5 tysięcy 
+                klocków LEGO oraz zastosowano wiele elementów elektronicznych, takie jak latarnia, ognisko, panele 
+                fotowoltaiczne, oświetlenie. Akcja zaangażowała wszystkich uczniów oraz nauczycieli i nauczycielki do 
+                wspólnej pracy,której towarzyszyła dobra zabawa i wspomnienia z lat dzieciństwa. Celem projektu było 
+                propagowanie edukacji EKO, poprzez zaprojektowanie 
+                różnych rozwiązań ekologicznych na podstawie makiety
+                miasta, wykonanej z klocków LEGO, które w przyszłości mogą być zastosowane w życiu codziennym.
+                <br>
+                Organizatorem międzynarodowego projektu jest Koen Timmers, belgijski badacz i wykładowca. W 2018 roku 
+                został ogłoszony przez Billa Gates’a jednym z najlepszych nauczycieli na świecie w ramach nagrody Global 
+                Teacher Prize. W 2015 roku uruchomił projekt Kakuma, w ramach którego 525 edukatorów na 6 kontynentach 
+                oferuje darmową edukację afrykańskim uchodźcom.
+            </div>
+            <div class="galeria">
+                <div class="zdjecie-galeria" style="display: block;">
+                    <a href="#dz"><img src="../img/zdj3.jpg" alt="TRobotyk" style="width: 100%;" onclick="powieksz(this)"></a>
+                </div>
+                <div class="zdjecie-galeria">
+                    <a href="#dz"><img src="../img/automatyk.png" alt="TAutomatyk" style="width: 100%;" onclick="powieksz(this)"></a>
+                </div>
+                <div class="zdjecie-galeria">
+                    <a href="#dz"><img src="../img/zdj4.jpg" alt="TInformatyk" style="width: 100%;" onclick="powieksz(this)"></a>
+                </div>
+                <div class="zdjecie-galeria">
+                    <a href="#dz"><img src="../img/zdj1.jpg" alt="TMechatronik" style="width: 100%;" onclick="powieksz(this)"></a>
+                </div>
+                <div class="zdjecie-galeria">
+                    <a href="#dz"><img src="../img/programista.png" alt="TProgramista" style="width: 100%;" onclick="powieksz(this)"></a>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
         </div>
-    </div>                                                                                                               
+        <div class="duze-zdj-box" id="dz">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img class="duze-zdj" style="width:100%">
+        </div>
+    </div>
+    <script src="../js/galeria-czyt.js"></script>
+    <script>
+        function powieksz(imgs) {
+            var duze = document.querySelector(".duze-zdj");
+            duze.src = imgs.src;
+            duze.parentElement.style.display = "block";
+        }
+    </script>
     <footer>
         <div id="stopa">
         <div class="dane-kontakt">

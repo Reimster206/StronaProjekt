@@ -1,0 +1,536 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body{
+      background-color: #dfe6e9;
+  }
+  
+  .baner{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/baner1.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+  }
+  
+  .baner p{
+    color: #fff;
+    font-size: 290%;
+    font-family: 'Bebas Neue', cursive;
+  }
+  
+  :root {
+    --kolor-tla: rgb(19, 82, 141);
+    --navh: 50px;
+    --navbgc: rgb(19, 82, 141);
+    --tekst-kolor: #ffffff;
+    --nav-tbgc: rgb(19, 82, 141);
+    --tekst-kolor-hover: rgb(149, 232, 247);
+    --czcionka: "Open Sans", Arial, Helvetica, sans-serif;
+  }
+    
+  .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--navh);
+    background-color: var(--navbgc);
+    font-family: var(--czcionka);
+    z-index: 9999;
+  }
+    
+  .navbar #togglericon {
+    visibility: hidden;
+  }
+    
+  .navbar #togglericon:after {
+    content: "☰";
+    position: absolute;
+    visibility: visible;
+    color: black;
+    font-size: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8rem;
+    border-radius: 4px;
+    border: 2px solid #ffffff00;
+  }
+    
+  .navbar #togglericon:checked:after {
+    color: black;
+  }
+    
+  .nav {
+    position: sticky;
+    top: 40px;
+    left: 0px;
+    right: 0px;
+    visibility: hidden;
+    opacity: 0;
+    padding: 8px;
+    transition: all 0.5s ease;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nav-tbgc);
+    box-shadow: 0px 4px 4px 0px #00000088;
+  }
+    
+  .navbar #togglericon:checked ~ div.nav {
+    visibility: visible;
+    transition: all 0.3s ease;
+    opacity: 1;
+  }
+    
+  .nav a {
+    padding: 8px;
+    font: var(--czcionka);
+    text-decoration: none;
+    color: var(--tekst-kolor);
+    background-color: var(--nav-tbgc);
+  }
+    
+  .nav a:hover {
+    color: var(--tekst-kolor-hover);
+  }
+    
+  .nav p {
+    margin: 0;
+    padding: 8px;
+    color: var(--tekst-kolor);
+  }
+    
+  .dropdown {
+    position: relative;
+    display: block;
+    color: var(--tekst-kolor);
+    font: var(--czcionka);
+  }
+  .dropdown label {
+    display: block;
+    padding: 8px;
+  }
+    
+  .dropdown label:after {
+    position: absolute;
+    content: "▼";
+    color: var(--tekst-kolor);
+    font-size: 0.75rem;
+    top: 8px;
+    margin-left: 4px;
+  }
+    
+  .dropdown label:hover {
+    color: var(--tekst-kolor-hover);
+  }
+  .dropdown label:hover:after {
+    color: var(--tekst-kolor-hover);
+  }
+  .dropdown input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  .dropdown input:checked ~ ul {
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .dropdown input:checked ~ ul > li > a {
+    display: block;
+    min-height: fit-content
+  }
+  
+  .dropdown ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: scroll;
+    max-height: 0px;
+    transition: max-height 0.25s ease;
+  }
+  .dropdown li {
+    margin: 12px 0px 12px 16px;
+  }
+    
+  .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  .navbar-centered {
+    justify-content: center;
+  }
+    
+    @media (min-width: 768px) {
+      .navbar #togglericon:checked ~ div.nav,
+      .navbar #togglericon ~ div.nav {
+        visibility: visible;
+      }
+    
+      .navbar {
+        height: var(--navh);
+        background-color: var(--nav-tbgc);
+        flex-direction: row;
+        display: flex;
+        visibility: visible;
+        position: fixed;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        width: 100%;
+        box-shadow: 0px 1px 5px 0px #88888888;
+      }
+    
+      .toggler {
+        display: none;
+      }
+    
+    
+      .nav {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        opacity: 1;
+        box-shadow: none;
+        background-color: #ffffff00;
+      }
+    
+      .at-center {
+        position: absolute;
+      }
+    
+      .dropdown {
+        margin: 0 8px;
+      }
+      .dropdown ul {
+        position: absolute;
+        top: 24px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--nav-tbgc);
+        padding: 0;
+      }
+      .dropdown:checked ~ ul {
+        max-height: fit-content;
+        transition: max-height 0.5s ease;
+        margin: 16px 0;
+        border-left: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        box-shadow: 5px 5px 5px 0px #99999988;
+      }
+    
+      .dropdown ul li {
+        width: 100%;
+        margin: 4px;
+        padding: 0;
+        display: flex;
+      }
+      .dropdown ul li a {
+        color: white;
+        padding: 8px;
+        margin: 0;
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+      }
+    }
+    
+    @media (min-width: 1200px) {
+      .nav {
+        justify-content: center;
+      }
+      .nav * {
+        margin: 0px 8px;
+      }
+  
+  }
+  
+  /***********KONIEC STYLU NAWIGACJI**************/
+  .main{
+    min-height: 100vh;
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 1);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+  } 
+  
+  .central{
+    width: 100%;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .tresc{
+    width: 80%;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+
+  .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .zdjecie-galeria{
+    max-width: 200px;
+    max-height: 200px;
+    display: inline;
+    margin: 5px;
+    float: left;
+    cursor: pointer;
+    transition: all .3s;
+  }
+
+  .zdjecie-galeria:hover{
+    transform: scale(1.05);
+  }
+
+  .duze-zdj-box{
+    max-width: 500px;
+    max-height: 500px;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: red;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  .czysty{
+    clear: both;
+  }
+  
+  @media only screen and (max-width: 1200px){
+    .tresc{
+      width: 90%;
+      text-align: center;
+    }
+  }
+
+  /*SLIDER*/
+  
+  .prev,.next{
+    color: #ffffff00;
+    cursor: none;
+  }
+  
+  @media only screen and (max-width:600px){
+      .przycisk1{
+          margin-bottom: 4px;
+          margin-right: 4px;
+      }
+      .post{
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+      }
+      .full-img img{
+          width: 90%;
+      }
+      .zdjecie-galeria{
+          display: none;
+          width: 250px;
+          height: 250px;
+          margin: 5px;
+      }
+      .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: rgb(255, 255, 255);
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          background-color: rgba(0,0,0,0.2);
+        }
+        .next {
+          right: 0;
+          border-radius: 20% 0 0 20%;
+        }
+        .prev{
+          left: 0;
+          border-radius: 0 20% 20% 0;
+        }
+        .next:hover {
+          background-color: rgba(0,0,0,0.6);
+          border-radius: 20% 0 0 20%;
+        }
+        .prev:hover{
+          background-color: rgba(0,0,0,0.6);
+          border-radius: 0 20% 20% 0;
+        }
+        .fade {
+          animation-name: fade;
+          animation-duration: 1s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4}
+          to {opacity: 1}
+        }
+  }
+  
+  
+  
+  /**********KONIEC STYLU MAINA******************/
+  #stopa{
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 200px;
+    width: 80%;
+    background-color: var(--kolor-tla);
+    overflow: auto;
+    padding: 5px;
+  }
+  
+  .dane-kontakt{
+    float: left;
+    width: 30%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  .kontakt-tt{
+    font-size: 1.8em;
+    color:rgb(149, 232, 247);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .kontakt-im{
+    font-size: 1.2em;
+    color: white;
+    font-weight: 200;
+  }
+  
+  .kontakt{
+    color:rgb(14, 219, 255);
+  }
+  .kontakt a{
+    text-decoration: none;
+    color:rgb(14, 219, 255);
+  }
+  
+  .spons{
+    width: 70%;
+    float: left;
+    display: flex;
+    
+  }
+  
+  .sponsorzy1 ,.sponsorzy2{
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .sposer{
+    display: inline;
+    margin: 5px;
+    float: left;
+  }
+  
+  .sponsorzy1 img,.sponsorzy2 img{
+    filter: grayscale(0);
+    margin: 5px;
+    height: 75px;
+    object-fit: contain;
+    transition: all .25s ease-out;
+    
+  }
+  
+  .sponsorzy1 img:hover,.sponsorzy2 img:hover{
+    filter: grayscale(0);
+    transform:scale(1.05);
+  }
+  
+  @media only screen and (max-width:1200px){
+    #stopa{
+        width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width:800px){
+      .sponsorzy1{
+          width: 100%;
+      }
+      #stopa{
+          justify-content: center;
+      }
+      .dane-kontakt{
+          text-align: center;
+      }
+  
+    .dane-kontakt{
+        width: 100%;
+        clear: both;
+    }
+  
+      .spons{
+          clear: both;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          width: 100%;
+      }
+  
+      .baner{
+          width: 100%;
+      }
+  
+      .main{
+          width: 95%;
+      }
+  
+      .sponsorzy1 img,.sponsorzy2 img{
+          filter: grayscale(0);
+          margin: 0 20px;
+          width: 100%;
+          object-fit: contain;
+          transition: all .25s ease-out;
+          margin-left: auto;
+          margin-right: auto;
+      }
+  }
+  /**********KONIEC STYLU FOOTERA***************/
