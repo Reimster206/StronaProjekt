@@ -9,7 +9,6 @@ html {
 }
 
 body{
-    /* margin-top: 5px; */
     background-color: #dfe6e9;
 }
 
@@ -35,157 +34,154 @@ body{
 }
 
 :root {
-    --kolor-tla: rgb(19, 82, 141);
-    --navbar-height: 50px;
-    --navbar-background-color: rgb(19, 82, 141);
-    --navbar-item-text-color: #ffffff;
-    --navbar-item-background-color: rgb(19, 82, 141);
-    --navbar-item-text-color-hover: rgb(149, 232, 247);
-    --navbar-item-font: bold 1rem/1rem "Open Sans", Arial, Helvetica, sans-serif;
-    --navbar-item-background-color-hover: white;
-    --navbar-font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  }
+  --kolor-tla: rgb(19, 82, 141);
+  --navh: 50px;
+  --navbgc: rgb(19, 82, 141);
+  --tekst-kolor: #ffffff;
+  --nav-tbgc: rgb(19, 82, 141);
+  --tekst-kolor-hover: rgb(149, 232, 247);
+  --czcionka: "Open Sans", Arial, Helvetica, sans-serif;
+}
   
-  .navbar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--navbar-height);
-    background-color: var(--navbar-background-color);
-    font-family: var(--navbar-font-family);
-    z-index: 9999;
-  }
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navh);
+  background-color: var(--navbgc);
+  font-family: var(--czcionka);
+  z-index: 9999;
+}
   
-  .navbar #togglericon {
-    visibility: hidden;
-  }
+.navbar #togglericon {
+  visibility: hidden;
+}
   
-  .navbar #togglericon:after {
-    content: "☰";
-    position: absolute;
-    visibility: visible;
-    color: black;
-    font-size: 1.5rem;
-    width: 1.8rem;
-    height: 1.8rem;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    line-height: 1.8rem;
-    border-radius: 4px;
-    border: 2px solid #ffffff00;
-  }
+.navbar #togglericon:after {
+  content: "☰";
+  position: absolute;
+  visibility: visible;
+  color: black;
+  font-size: 1.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8rem;
+  border-radius: 4px;
+  border: 2px solid #ffffff00;
+}
   
-  .navbar #togglericon:checked:after {
-    color: black;
-    /* border: 2px solid #f0f0f0; */
-  }
+.navbar #togglericon:checked:after {
+  color: black;
+}
   
-  .nav {
-    position: sticky;
-    top: 40px;
-    left: 0px;
-    right: 0px;
-    visibility: hidden;
-    opacity: 0;
-    padding: 8px;
-    transition: all 0.5s ease;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--navbar-item-background-color);
-    box-shadow: 0px 4px 4px 0px #00000088;
-  }
+.nav {
+  position: sticky;
+  top: 40px;
+  left: 0px;
+  right: 0px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 8px;
+  transition: all 0.5s ease;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--nav-tbgc);
+  box-shadow: 0px 4px 4px 0px #00000088;
+}
   
-  .navbar #togglericon:checked ~ div.nav {
-    visibility: visible;
-    transition: all 0.3s ease;
-    opacity: 1;
-  }
+.navbar #togglericon:checked ~ div.nav {
+  visibility: visible;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
   
-  .nav a {
-    padding: 8px;
-    font: var(--navbar-item-font);
-    text-decoration: none;
-    color: var(--navbar-item-text-color);
-    background-color: var(--navbar-item-background-color);
-  }
+.nav a {
+  padding: 8px;
+  font: var(--czcionka);
+  text-decoration: none;
+  color: var(--tekst-kolor);
+  background-color: var(--nav-tbgc);
+}
   
-  .nav a:hover {
-    color: var(--navbar-item-text-color-hover);
-  }
+.nav a:hover {
+  color: var(--tekst-kolor-hover);
+}
   
-  .nav p {
-    margin: 0;
-    padding: 8px;
-    color: var(--navbar-item-text-color);
-  }
+.nav p {
+  margin: 0;
+  padding: 8px;
+  color: var(--tekst-kolor);
+}
   
-  .dropdown {
-    position: relative;
-    display: block;
-    color: var(--navbar-item-text-color);
-    font: var(--navbar-item-font);
-  }
-  .dropdown label {
-    display: block;
-    padding: 8px;
-  }
+.dropdown {
+  position: relative;
+  display: block;
+  color: var(--tekst-kolor);
+  font: var(--czcionka);
+}
+.dropdown label {
+  display: block;
+  padding: 8px;
+}
   
-  .dropdown label:after {
-    position: absolute;
-    content: "▼";
-    color: var(--navbar-item-text-color);
-    font-size: 0.75rem;
-    top: 8px;
-    margin-left: 4px;
-  }
+.dropdown label:after {
+  position: absolute;
+  content: "▼";
+  color: var(--tekst-kolor);
+  font-size: 0.75rem;
+  top: 8px;
+  margin-left: 4px;
+}
   
-  .dropdown label:hover {
-    color: var(--navbar-item-text-color-hover);
-  }
-  .dropdown label:hover:after {
-    color: var(--navbar-item-text-color-hover);
-  }
-  .dropdown input {
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-  }
-  .dropdown input:checked ~ ul {
-    max-height: 500px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    transition: max-height 0.5s ease;
-  }
+.dropdown label:hover {
+  color: var(--tekst-kolor-hover);
+}
+.dropdown label:hover:after {
+  color: var(--tekst-kolor-hover);
+}
+.dropdown input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.dropdown input:checked ~ ul {
+  max-height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: max-height 0.5s ease;
+}
 
 .dropdown input:checked ~ ul > li > a {
   display: block;
   min-height: fit-content
 }
 
-  .dropdown ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: scroll;
-    max-height: 0px;
-    transition: max-height 0.25s ease;
-  }
-  .dropdown li {
-    margin: 12px 0px 12px 16px;
-  }
+.dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: scroll;
+  max-height: 0px;
+  transition: max-height 0.25s ease;
+}
+.dropdown li {
+  margin: 12px 0px 12px 16px;
+}
   
-  .dropdown a {
-    color: white;
-    text-decoration: none;
-    font-weight: normal;
-  }
-  .navbar-centered {
-    justify-content: center;
-  }
+.dropdown a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+}
+.navbar-centered {
+  justify-content: center;
+}
   
   @media (min-width: 768px) {
     .navbar #togglericon:checked ~ div.nav,
@@ -194,8 +190,8 @@ body{
     }
   
     .navbar {
-      height: var(--navbar-height);
-      background-color: var(--navbar-item-background-color);
+      height: var(--navh);
+      background-color: var(--nav-tbgc);
       flex-direction: row;
       display: flex;
       visibility: visible;
@@ -221,7 +217,7 @@ body{
       top: 0;
       opacity: 1;
       box-shadow: none;
-      background-color: #ffffff00; /* transparent */
+      background-color: #ffffff00;
     }
   
     .at-center {
@@ -236,7 +232,7 @@ body{
       top: 24px;
       display: flex;
       flex-direction: column;
-      background-color: var(--navbar-item-background-color);
+      background-color: var(--nav-tbgc);
       padding: 0;
     }
     .dropdown:checked ~ ul {
@@ -277,47 +273,44 @@ body{
 
 /***********KONIEC STYLU NAWIGACJI**************/
 .main{
-    min-height: 100vh;
-    /* border: 1px black solid; */
-    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 1);
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
+  min-height: 100vh;
+  box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 1);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
 } 
 
 .central{
-    width: 100%;
-    height: 75%;
-    /* border: solid black 1px; */
-    margin-bottom: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  width: 100%;
+  height: 75%;
+  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .kierunki{
-    width: 100%;
-    min-height: 25%;
-    /* border: solid black 1px; */
-    margin-bottom: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  width: 100%;
+  min-height: 25%;
+  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .kierunek{
-    width: 200px;
-    height: 200px;
-    display: inline;
-    margin: 5px;
-    float: left;
-    cursor: pointer;
-    transition: all .3s;
+  width: 200px;
+  height: 200px;
+  display: inline;
+  margin: 5px;
+  float: left;
+  cursor: pointer;
+  transition: all .3s;
 }
 
 .kierunek:hover{
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .czysty{
@@ -338,7 +331,6 @@ body{
 }
 
 .zdj-post{
-  border: 1px solid green;
   width: 30%;
   height: 27vh;
   margin:5px;
@@ -381,9 +373,9 @@ body{
   background-size:cover;
 }
 #zdj3{
-    background-image: url("../img/zdj3.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
+  background-image: url("../img/zdj3.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 #zdj4{
   background-image: url("../img/zdj4.jpg");
@@ -406,31 +398,31 @@ body{
 }
 
 .przycisk1{
-z-index: 100;
-margin-bottom: 4px;
-margin-right: 10px;
-right: 0;
-position: absolute;
-background: #7c7c7c;
-border-radius: 4px;
-box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
-box-sizing: border-box;
-color: #000000;
-cursor: pointer;
-font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
-font-size: 12px;
-font-weight: 700;
-line-height: 12px;
-opacity: 1;
-outline: 0 solid transparent;
-padding: 4px 9px;
-user-select: none;
--webkit-user-select: none;
-touch-action: manipulation;
-width: fit-content;
-word-break: break-word;
-border: 0;
-font-variant: small-caps;
+  z-index: 100;
+  margin-bottom: 4px;
+  margin-right: 10px;
+  right: 0;
+  position: absolute;
+  background: #7c7c7c;
+  border-radius: 4px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 4px 9px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  font-variant: small-caps;
 }
 .przycisk1:hover{
   box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
@@ -467,15 +459,17 @@ font-variant: small-caps;
 
 }
 
-/*slider*/
+/*SLIDER*/
+
 .prev,.next{
   color: #ffffff00;
   cursor: none;
 }
+
 @media only screen and (max-width:600px){
     .przycisk1{
         margin-bottom: 4px;
-        margin-right: 0;
+        margin-right: 4px;
     }
     .post{
         justify-content: center;
@@ -489,7 +483,6 @@ font-variant: small-caps;
         display: none;
         width: 250px;
         height: 250px;
-        border: 1px solid red;
         margin: 5px;
     }
     .prev, .next {
@@ -596,7 +589,7 @@ font-variant: small-caps;
 }
 
 .sponsorzy1 img,.sponsorzy2 img{
-  filter: grayscale(1);
+  filter: grayscale(0);
   margin: 5px;
   height: 75px;
   object-fit: contain;

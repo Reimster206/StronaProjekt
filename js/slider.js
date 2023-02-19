@@ -18,7 +18,7 @@ if(screen.width<600){
 
 var slider;
 
-let slideIndex = 2;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
